@@ -23,4 +23,4 @@ input[name="uh"][value^="4"] ~ a:after { content: "quote 2" }
 input[name="uh"][value^="3"] ~ a:after { content: "quote 3" }
 ```
 
-The classes select beginning of the `uh` attribute of the `logout` field (which is a pseudorandom string) to choose which style to apply. I got the idea from xiphirx of /r/diablo, but I have heard that this trick was originally devised by deadb33f.
+The classes select beginning of the `uh` attribute of the `logout` field (which is a pseudorandom string) to choose which style to apply. I got the idea from xiphirx of /r/diablo, but I have heard that this trick was originally devised by deadb33f. You can see a working example on /r/diablo, /r/buffy, or /r/angel (as of July 2012).
