@@ -1,3 +1,7 @@
+/* Once some more browsers start complying with the CSS3 Generated and Replaced Content Module, we can hide elements simply
+ * by setting the ``content`` attribute. As of July 2012, the only major browser that supports it is Opera, but the module
+ * is still in "working draft" status at W3C. For now, we'll also set ``font-size`` to 0. */
+
 .titlebox .word { display: none }	/* hide the default "readers" */
 .titlebox .number::before { content: "Welcome to Sunnydale. Population: " } /* insert our own text before the number */
 
