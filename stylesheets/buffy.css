@@ -63,7 +63,6 @@ a[href="#s"], .md p > a[href="#s"] {
 	display: inline-block
 }
 a[href="#s"]::after, .md p > a[href="#s"]::after {
-	font-size: small;
 	content: attr(title);
 	color: #000;
 	padding: 0 0.5em;
