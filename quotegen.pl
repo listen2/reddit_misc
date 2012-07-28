@@ -15,7 +15,7 @@ my $i = 0;
 open(INFILE, "<".$ARGV[0]);
 while (<INFILE>) {
 	chomp;
-	push(@lines, "input[name=\"uh\"][value^=\"".alphize($i)."\"] ~ a::after{content: \"".$_."\"}");
+	push(@lines, "input[name=\"uh\"][value^=\"".alphize($i)."\"] ~ a::after{content:\"".$_."\"}");
 	$i++;
 }
 
