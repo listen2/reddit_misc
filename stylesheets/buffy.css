@@ -1,10 +1,10 @@
 /*!
- * If you're reading this code on reddit, you're seeing a minified version. An easy-to-read, annotated copy is
- * available at https://github.com/listen2/reddit_misc/tree/master/stylesheets
+ * If you're reading this code on reddit, you're seeing a minified version. An easy-to-read, annotated copy
+ * is available at https://github.com/listen2/reddit_misc/tree/master/stylesheets
  *
- * Note that some elements are hidden by setting ``font-size`` to 0. That's because some browsers don't yet comply
- * with the CSS3 Generated and Replaced Content Module (which is in "Working Draft" status at W3C. Once this is
- * supported, we can hide elements simply by setting the ``content`` attribute.
+ * Note that some elements are hidden by setting ``font-size`` to 0. That's because some browsers don't yet
+ * comply with the CSS3 Generated and Replaced Content Module (which is in "Working Draft" status at W3C.
+ * Once this is supported, we can hide elements simply by setting the ``content`` attribute.
  *
  * Some terminology:
  * 	"thing" is a reddit technical term for either a submission, comment, or entry on a listing-page.
@@ -12,6 +12,7 @@
  */
 
 /* Hide some text elements so we can replace them with our own text */
+
 .titlebox .word {		/* hide the default "readers" */
 	display: none;
 }
@@ -39,6 +40,7 @@
 
 
 /* style the header bar */
+
 #header-bottom-left {
 	background: #600 url(%%header3%%) no-repeat;	/* the image has a transparent background */
 	height: 75px;
@@ -61,8 +63,10 @@
 }
 
 
-/* link colors. The reason some classes appear redundant is because the default stylesheet overrides some elements
- * by using more specific selectors. I added more classes instead of just putting !important on everything. */
+/* link colors. The reason some classes appear redundant is because the default stylesheet overrides some
+ * elements by using more specific selectors. I added more classes instead of just putting !important on
+ * everything. */
+
 a,		/* links in general */
 .tagline a,	/* usernames (this might be a RES class?) */
 .thing .title,	/* thing titles */
@@ -116,45 +120,66 @@ a.author:hover,	/* hovered usernames */
 }
 .formtabs-content { border-top: 4px solid #500 }
 
+
 /* spoiler tags */
-a[href="/spoiler"], .comment .md p > a[href="/spoiler"], .usertext-body .md p > a[href="/spoiler"] {
+
+a[href="/spoiler"],
+.comment .md p > a[href="/spoiler"],
+.usertext-body .md p > a[href="/spoiler"] {
 	display: inline-block;
 	overflow: hidden;
 	background: #000;
 	color: #000 !important;
 	cursor: default
 }
-a[href="/spoiler"]:hover, .comment .md p > a[href="/spoiler"]:hover, .usertext-body .md p > a[href="/spoiler"]:hover {
+a[href="/spoiler"]:hover,
+.comment .md p > a[href="/spoiler"]:hover,
+.usertext-body .md p > a[href="/spoiler"]:hover {
 	color: #fff !important;
 	text-decoration: none
 }
+
 /* these spoiler tags degrade gracefully AND work on mobile devices. See http://www.reddit.com/r/csshelp/comments/x18bx/ */
-a[href="#s"], .md p > a[href="#s"] {
+a[href="#s"],
+.md p > a[href="#s"] {
 	text-decoration: none !important;
 	cursor: default;
 	background: #000;
 	color: #fff !important;
-	display: inline-block
+	display: inline-block;
 }
-a[href="#s"]::after, .md p > a[href="#s"]::after {
+a[href="#s"]::after,
+.md p > a[href="#s"]::after {
 	content: attr(title);
 	color: #000;
 	padding: 0 0.5em;
-	visibility: visible
+	visibility: visible;
 }
-a[href="#s"]:hover, .md p > a[href="#s"]:hover { color: #fff !important }
-a[href="#s"]:hover::after, a[href="#s"]:active::after, .md p > a[href="#s"]:hover::after, .md p > a[href="#s"]:active::after { color: #fff }
+a[href="#s"]:hover,
+.md p > a[href="#s"]:hover {
+	color: #fff !important;
+}
+a[href="#s"]:hover::after,
+a[href="#s"]:active::after,
+.md p > a[href="#s"]:hover::after,
+.md p > a[href="#s"]:active::after {
+	color: #fff;
+}
+
 
 /* sidebar pics */
+
 a[href="#sidebar_pic"] {
 	display: inline-block;
 	background: url(%%assets%%) 0 0 no-repeat;
 	height: 212px;
 	width: 298px;
-	border: 1px solid #500
+	border: 1px solid #500;
 }
 
+
 /* upstakes and downstakes */
+
 .midcol { margin-left: 12px }
 .link .midcol { padding-right: 10px }
 .arrow { width: 16px; height: 18px; background-image: url(%%assets%%) !important }
@@ -164,6 +189,7 @@ a[href="#sidebar_pic"] {
 .down { background-position: -16px -342px !important }
 .score { margin-left: 1px }
 
+
 #link-desc::after, #text-desc::after {
 	display: block;
 	margin-top: 1em;
@@ -171,7 +197,9 @@ a[href="#sidebar_pic"] {
 	content: "Thanks for checking up on the Scoobies! If you don't see your submission in the 'new' section, the Big Bads could have marked it as spam. If it doesn't show up after 30 minutes, please contact the Gang via mod mail so they can allow your post to enter the 'Verse!"
 }
 
+
 /* mail coffins */
+
 #mail {
 	background-image: url(%%assets%%) !important;
 	height: 16px;
@@ -180,10 +208,14 @@ a[href="#sidebar_pic"] {
 #mail.nohavemail { background-position: 0 -300px }
 #mail.havemail { background-position: -16px -300px }
 
+
 /* hide "created by" in the sidebar */
+
 .bottom { display: none }
 
+
 /* username styling for special users */
+
 .author[href$="/ClareKramer"]::before {
 	background: url(%%assets%%) -40px -290px no-repeat;
 	content: "";
@@ -196,9 +228,12 @@ a[href="#sidebar_pic"] {
 }
 .author[href$="/ClareKramer"] { color: #000 !important }
 
+
 .flair { color: #500 }	/* userflair text */
 
+
 /* announcement sticky */
+
 div.content { margin-top: 56px }	/* make some space above the main content */
 .side { margin-top: -43px } /* move the sidebar down, too */
 .titlebox form { position: static }
@@ -223,6 +258,7 @@ div.content { margin-top: 56px }	/* make some space above the main content */
 	margin-left: -65px
 }
 
+
 /* table for the two-column related subreddits */
 .side table {
 	width: 260px
@@ -236,6 +272,7 @@ div.content { margin-top: 56px }	/* make some space above the main content */
 	display: none
 }
 
+
 /* sidebar horiz divider */
 .side hr {
 	background: url(%%assets%%) 0 -280px no-repeat;
@@ -245,6 +282,7 @@ div.content { margin-top: 56px }	/* make some space above the main content */
 	margin-top: 12px;
 	margin-bottom: 12px
 }
+
 
 /* hide the old submit and create buttons */
 .sidebox.submit, .sidebox.create, .nub { display: none }
@@ -271,7 +309,9 @@ a[href$="/reddits/create"] {
 	text-indent: 3%
 }
 
+
 /* link flair */
+
 .linkflairlabel {
 	border: 1px solid #c11;
 	border-radius: 3px;
@@ -288,10 +328,12 @@ a[href$="/reddits/create"] {
 .linkflair-spoiler a.title:hover { text-shadow: 0 0 0.2em #c11, 0 0 0.2em #c11, 0 0 0.2em #c11; color: #000 !important }
 .listing-page .linkflair-spoiler .thumbnail img { opacity: 0 }	/* hide the thumbnail on spoiler linkflair */
 
+
 /* "B" thumbnails */
 .thumbnail.self, .thumbnail.default { background: url(%%assets%%) -40px -320px no-repeat }
 .thumbnail { max-height: 50px }	/* it looks weird if the thumbnail is taller than the textual element beside it */
 .listing-page .thing { min-height: 60px } /* but don't let things be small just because the thumbnails are capped at 50px */
+
 
 /* some RES elements */
 #REScommentSubToggle { color: #600 !important }
@@ -329,7 +371,6 @@ a[href$="/reddits/create"] {
 	left: -14px !important;
 	top: 3px !important;
 }
-
 
 
 .tabmenu {
@@ -379,6 +420,7 @@ a[href$="/reddits/create"] {
 
 
 /* Create a trophy case like the one on user overview pages */
+
 .usertext-body h1:nth-last-of-type(1) {
 	color: #808080;
 	font-size: 130%;
@@ -426,6 +468,7 @@ a[href$="/reddits/create"] {
 
 /* random quotes
 See https://github.com/listen2/reddit_misc/blob/master/README.md for more info */
+
 input[name="uh"] ~ a::after, .user::before {
 	position: absolute;
 	top: 14px;
