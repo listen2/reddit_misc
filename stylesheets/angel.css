@@ -1,0 +1,368 @@
+.titlebox .word { display: none }
+.titlebox .number::after { content: " open cases" }
+
+.helplink { font-size: 0; content: ""; margin-top: 0 !important }
+.helplink::before { font-size: small; content: "message the team" }
+.helplink + div h1 { font-size: 0; content: "" }
+.helplink + div h1::before { font-size: 14px; content: "Angel's Avengers" }
+
+/* header color and border */
+#header-bottom-left { background: #005 url(%%header4b%%) no-repeat; height: 75px; box-shadow: 0 0 6px #555 }
+#sr-header-area { border: 0 }
+#header { border: 0; border-bottom: 1px }
+.pagename a { position: relative; bottom: 2px; color: #eee }
+.side .redditname { display: none }
+
+/* link colors */
+a, .tagline a, .thing .title, .thing .title.loggedin { color: #008 }
+a:hover { color: #a80; text-decoration: underline }
+.thing .title:hover, .thing .title.loggedin:visited:hover, .thing a:visited:hover, .single-page .thing a.title:hover, .tagline a:hover { color: #a80 }
+a.author:hover, .thing .md p > a:visited:hover { color: #a80 !important }
+.thing .title:visited, .thing .title.loggedin:visited { color: #444 }
+.thing .md p > a:visited { color: #444 !important }
+
+.buttons a { color: #666 !important }
+.commentarea .menuarea, .tagline { color: #666 }
+.newComments { color: #a07 !important }
+.likes div.score.likes { color: #a80 }
+.link div.score.dislikes { color: #444 }
+.flat-list .selected a { color: #a07 }
+
+.md { border-color: #444 !important }
+.linkinfo { background: #ddd; border-color: #444 }
+.thing { background: #fff }
+#title-field, #url-field, #text-field, #reddit-field, .linefield { background: #eee }
+.tabmenu.formtab .selected a {
+	border: 1px solid #005;
+	background: #003;
+	color: #fff !important
+}
+.infobar {
+	border: 1px solid #005;
+	background: #eee
+}
+.formtabs-content { border-top: 4px solid #005 }
+
+/* spoiler tags */
+a[href="/spoiler"], .comment .md p > a[href="/spoiler"], .usertext-body .md p > a[href="/spoiler"] {
+	display: inline-block;
+	overflow: hidden;
+	background: #000;
+	color: #000 !important;
+	cursor: default
+}
+a[href="/spoiler"]:hover, .comment .md p > a[href="/spoiler"]:hover, .usertext-body .md p > a[href="/spoiler"]:hover {
+	color: #fff !important;
+	text-decoration: none
+}
+a[href="#s"], .md p > a[href="#s"] { text-decoration: none !important; cursor: default; background: #000; color: #fff !important; display: inline-block }
+a[href="#s"]::after, .md p > a[href="#s"]::after { font-size: small; content: attr(title); color: #000; padding: 0 0.5em; visibility: visible }
+a[href="#s"]:hover, .md p > a[href="#s"]:hover { color: #fff !important }
+a[href="#s"]:hover::after, a[href="#s"]:active::after, .md p > a[href="#s"]:hover::after, .md p > a[href="#s"]:active::after { color: #fff }
+
+/* sidebar pics */
+a[href="#sidebar_pic"] {
+	display: inline-block;
+	background: url(%%assets%%) 0 0 no-repeat;
+	height: 208px;
+	width: 298px;
+	border: 1px solid #005
+}
+
+/* upstakes and downstakes */
+.arrow.upmod { background: url(%%assets%%) -15px -362px no-repeat; }
+.arrow.downmod { background: url(%%assets%%) 0 -362px no-repeat; }
+
+#link-desc::after, #text-desc::after {
+	display: block;
+	margin-top: 1em;
+	font-weight: bold;
+	content: "Thanks for checking up on the Scoobies! If you don't see your submission in the 'new' section, the Big Bads could have marked it as spam. If it doesn't show up after 30 minutes, please contact the Gang via mod mail so they can allow your post to enter the 'Verse!"
+}
+
+/* mail indicator */
+#mail.havemail {
+	background-image: url(%%assets%%) !important;
+	background-position: 0 -300px;
+	display: inline-block
+}
+
+/* hide "created by" in the sidebar */
+.bottom { display: none }
+
+/* username styling for special users */
+.author[href$="/ClareKramer"]::before {
+	background: url(%%assets%%) -40px -300px no-repeat;
+	content: "";
+	width: 14px;
+	height: 13px;
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	margin-right: 2px
+}
+.author[href$="/ClareKramer"] { color: #000 !important }
+
+.flair {
+	color: #005;
+}
+
+/* announcement sticky */
+div.content { margin-top: 56px }	/* make some space above the main content */
+.side { margin-top: -43px } /* move the sidebar down, too */
+.titlebox form { position: static }
+.side h3:nth-of-type(1) {
+	position: absolute;
+	display: block;
+	top: 92px;
+	left: 40px;
+	background-color: #eee;
+	color: #444;
+	text-align: left;
+	margin-top: 9px;
+	margin-left: 5px;
+	border-radius: 8px;
+	width: 50%;
+	padding: 7px 0 7px 40px
+}
+.side h3:nth-of-type(1)::before {
+	content: url(%%cordy3%%);
+	position: absolute;
+	margin-top: -9px;
+	margin-left: -65px
+}
+
+/* table for the two-column related subreddits */
+.side table {
+	width: 260px
+}
+.side td {
+	border: 0;
+	padding: 2px;
+	width: 120px
+}
+.side th {
+	display: none
+}
+
+/* sidebar horiz divider */
+.side hr {
+	background-image: url(%%assets%%);
+	background-repeat: no-repeat;
+	width: 160px;
+	height: 20px;
+	border: 0;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	text-align: center
+}
+.side hr:nth-of-type(odd) { background-position: 0 -210px; }
+.side hr:nth-of-type(even) { background-position: 0 -230px; }
+
+
+/* hide the old submit and create buttons */
+.sidebox.submit { display: none }
+.sidebox.create { display: none }
+.nub { display: none }
+/* new submit button */
+a[href$="/r/angel/submit"], a[href$="/reddits/create"] {
+	display: inline-block;
+	border: 1px solid #444;
+	background: #ddd url(%%assets%%) no-repeat 5px -250px;
+	width: 268px;
+	height: 45px;
+	text-align: right;
+	line-height: 43px;
+	font-size: 22pt;
+	color: #008;
+	font-weight: bold;
+	padding-right: 30px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px
+}
+/* new create button */
+a[href$="/reddits/create"] {
+	font-size: 14pt;
+	text-indent: 5%;
+	padding-right: 30px;
+	line-height: 1em;
+	width: 268px
+}
+
+.flair-blackthorn + .userattrs {
+	background: url(%%assets%%) -60px -300px no-repeat;
+	display: inline-block;
+	height: 18px;
+	width: 23px;
+	position: relative;
+	top: 4px
+}
+
+/* link flair */
+.linkflairlabel {
+	border: 1px solid #005;
+	border-radius: 3px;
+	color: #eee;
+	padding: 2px;
+	font-weight: bold;
+	border-color: #000;
+	max-width: 9999px !important
+}
+.linkflair-lw .thumbnail { background: url(%%assets%%) -180px -320px no-repeat !important }
+.linkflair-lw .linkflairlabel { background: #282 }
+.listing-page .linkflair-spoiler .thumbnail { background: url(%%assets%%) -110px -320px no-repeat !important }
+.linkflair-spoiler .linkflairlabel { color: #eee; background: #a07 }
+.linkflair-spoiler a.title:hover { text-shadow: 0 0 0.2em #a07, 0 0 0.2em #a07, 0 0 0.2em #a07; color: #000 !important }
+.listing-page .linkflair-spoiler .thumbnail img { opacity: 0 }
+
+/* "B" thumbnails */
+.thumbnail.self, .thumbnail.default { background: url(%%assets%%) -40px -320px no-repeat }
+.thumbnail { max-height: 50px }
+.listing-page .thing { min-height: 60px }
+
+/* some RES elements */
+#REScommentSubToggle { color: #005 !important }
+#REScommentSubToggle:hover { background: #eee !important }
+.selftext.collapsed { background: url(%%buttons%%) 0 -464px no-repeat !important }
+.selftext.collapsed:hover { background: url(%%buttons%%) 0 -488px no-repeat !important }
+.selftext.expanded { background: url(%%buttons%%) 0 -536px no-repeat !important }
+.selftext.expanded:hover { background: url(%%buttons%%) 0 -512px no-repeat !important }
+.video.collapsed { background: url(%%buttons%%) 0 -584px no-repeat !important }
+.video.collapsed:hover { background: url(%%buttons%%) 0 -560px no-repeat !important }
+.video.expanded { background: url(%%buttons%%) 0 -632px no-repeat !important }
+.video.expanded:hover { background: url(%%buttons%%) 0 -608px no-repeat !important }
+.image { background-image: url(%%buttons%%) !important }
+.image:hover { text-decoration: none }
+
+#header-bottom-right {
+	background-color: transparent;
+	z-index: 99;
+	right: 30px;
+	bottom: 10px;
+	height: 14px;
+	position: absolute;
+	top: 18px !important;
+	right: 0;
+	padding: 4px 10px;
+	border-radius: 0
+}
+#header-bottom-right .separator { color: #eee }
+#header-bottom-right .user { margin: 0 !important }
+#header-bottom-right a, .userkarma { color: #eee }
+.userbarHide { border: none !important; color: #eee !important; background: none !important; left: -14px !important }
+.userbarShow { border: none !important; color: #eee !important; background: none !important; left: -14px !important }
+
+
+
+.tabmenu {
+	position: relative;
+	bottom: 1px
+}
+.tabmenu li a, .tabmenu li.selected a {
+	position: relative;
+	bottom: 4px;
+	margin-bottom: 1px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border: 1px solid #000;
+	background: #005;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: normal;
+	color: #eee
+}
+.tabmenu li.selected a {
+	border: 1px solid #a80;
+	background: #003;
+	color: #ca0 !important
+}
+
+
+#searchexpando {
+	border: 1px solid #008;
+	background: #eee
+}
+#search {
+	position: relative;
+	z-index: 100;
+	top: -2px;
+	right: 2px
+}
+#search input[name="q"] {
+	border: 1px solid #a80;
+	border-radius: 4px;
+	background-repeat: repeat-x;
+	color: #444;
+	font-size: 12px;
+	padding: 5px;
+	margin-bottom: 4px;
+	width: 290px
+}
+
+/* random quotes
+See https://github.com/listen2/reddit_misc/blob/master/README.md for more info */
+input[name="uh"] ~ a::after, .user::before {
+	position: absolute;
+	top: 14px;
+	right: 400px;
+	width: 440px;
+	height: 45px;
+	font-style: italic;
+	font-size: 14px;
+	line-height: 1.1em;
+	color: #eee;
+	z-index: 0;
+	display: block;
+	text-align: left;
+	vertical-align: middle
+}
+.user::before {
+	z-index: 10;
+	content: " ";
+	top: 15px;
+	right: 405px;
+	height: 45px;
+	width: 505px
+}
+input[name="uh"][value^="41"] ~ a::after { content: "You think you did me a favor? You damned me!" }
+input[name="uh"][value^="31"] ~ a::after { content: "I could pick the wisest and bravest knight in all the land and make him mine forever with a kiss." }
+input[name="uh"][value^="21"] ~ a::after { content: "I'm not gonna get a bat-nose like that, huh? Am I?" }
+input[name="uh"][value^="11"] ~ a::after { content: "Angelus? The Latinate for “Angel”. It’s marvelous!" }
+input[name="uh"][value^="01"] ~ a::after { content: "I have to count my past sins, then alphabetize them. Oh, by the way, I'm thinking of snapping on Friday." }
+input[name="uh"][value^="z"] ~ a::after { content: "You had sex last night with a bleached blonde." }
+input[name="uh"][value^="y"] ~ a::after { content: "Right between the clowns and the big talking hot dog." }
+input[name="uh"][value^="x"] ~ a::after { content: "Then stop flexing your manly boob-muscles or whatever." }
+input[name="uh"][value^="w"] ~ a::after { content: "Stop being such a wanker and put it on." }
+input[name="uh"][value^="v"] ~ a::after { content: "I know the words. And, I think it's kinda pretty." }
+input[name="uh"][value^="u"] ~ a::after { content: "It's his reward." }
+input[name="uh"][value^="t"] ~ a::after { content: "Are you assualting me up in this haven of justice?!" }
+input[name="uh"][value^="s"] ~ a::after { content: "Darling boy. So young, still so very young." }
+input[name="uh"][value^="r"] ~ a::after { content: "Yeah, tell me something you don't know that I don't know." }
+input[name="uh"][value^="q"] ~ a::after { content: "No one could have said “demon poo” before I touched it?" }
+input[name="uh"][value^="p"] ~ a::after { content: "I don’t dance." }
+input[name="uh"][value^="o"] ~ a::after { content: "Oh, no, this old thing?" }
+input[name="uh"][value^="n"] ~ a::after { content: "What's a rogue demon?" }
+input[name="uh"][value^="m"] ~ a::after { content: "I didn't ask for this responsibility, unlike some people, who shall remain lifeless." }
+input[name="uh"][value^="l"] ~ a::after { content: "The good fight, yeah?" }
+input[name="uh"][value^="k"] ~ a::after { content: "One of us has been drinking, and I'm sorry to say it's not me." }
+input[name="uh"][value^="j"] ~ a::after { content: "Our rats are low..." }
+input[name="uh"][value^="i"] ~ a::after { content: "They get groiny with one another—the world as we know it falls apart." }
+input[name="uh"][value^="h"] ~ a::after { content: "I think it, I say it. It's my way." }
+input[name="uh"][value^="g"] ~ a::after { content: "Uh uh, I don't want to. You both withdraw when I go vamp. I feel you judge me." }
+input[name="uh"][value^="f"] ~ a::after { content: "I don't think 'urgh' is a magic word, if one could call it a word, and certainly not a magic one." }
+input[name="uh"][value^="e"] ~ a::after { content: "You got me. I’m a pope." }
+input[name="uh"][value^="d"] ~ a::after { content: "Well, as vampires go, you're pretty cuddly." }
+input[name="uh"][value^="c"] ~ a::after { content: "It's called Addiction, Angel. We all have them. I believe yours is called Slutty the Vampire Slayer." }
+input[name="uh"][value^="b"] ~ a::after { content: "He'd celebrate the opening of a mailbox with a drink down in the pub." }
+input[name="uh"][value^="a"] ~ a::after { content: "What's next? Vampire Cowboy? Vampire Fireman? Oh, Vampire Ballerina!" }
+input[name="uh"][value^="9"] ~ a::after { content: "Evil's still afoot ... and I'm almost out of that nancy-boy hair gel that I like so much." }
+input[name="uh"][value^="8"] ~ a::after { content: "How can I thank you, you mysterious, black-clad, hunk of a night thing?" }
+input[name="uh"][value^="7"] ~ a::after { content: "If that was my gift, I'd return it." }
+input[name="uh"][value^="6"] ~ a::after { content: "Can you fly?" }
+input[name="uh"][value^="5"] ~ a::after { content: "Yeah. There's not actually a cure for that." }
+input[name="uh"][value^="4"] ~ a::after { content: "So, um, are you still... 'Grrr'?" }
+input[name="uh"][value^="3"] ~ a::after { content: "It's about showing people there's still love and hope in the world." }
+input[name="uh"][value^="2"] ~ a::after { content: "And he was the meanest vampire in all the land." }
+input[name="uh"][value^="1"] ~ a::after { content: "Let me tell you a little bedtime story." }
+input[name="uh"][value^="0"] ~ a::after { content: "Well I like the place. Not much with the view, but it has a certain Batcave air to it." }
