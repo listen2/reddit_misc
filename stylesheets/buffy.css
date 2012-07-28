@@ -318,9 +318,14 @@ div.content {		/* make some space above the main content */
 
 
 /* hide the old submit and create buttons */
-.sidebox.submit, .sidebox.create, .nub { display: none }
+.sidebox.submit,
+.sidebox.create,
+.nub {
+	display: none;
+}
 /* new submit button */
-a[href$="/r/buffy/submit"], a[href$="/reddits/create"] {
+a[href$="/r/buffy/submit"],
+a[href$="/reddits/create"] {
 	display: inline-block;
 	border: 1px solid #444;
 	background: #ddd url(%%xbow%%) no-repeat 6px 0;
@@ -345,6 +350,7 @@ a[href$="/reddits/create"] {
 
 /* link flair */
 
+/* universal */
 .linkflairlabel {
 	border: 1px solid #c11;
 	border-radius: 3px;
@@ -354,18 +360,42 @@ a[href$="/reddits/create"] {
 	border-color: #000;
 	max-width: 9999px !important
 }
-.linkflair-lw .thumbnail { background: url(%%assets%%) -180px -320px no-repeat !important }
-.linkflair-lw .linkflairlabel { background: #282 }
-.listing-page .linkflair-spoiler .thumbnail { background: url(%%assets%%) -110px -320px no-repeat !important }
-.linkflair-spoiler .linkflairlabel { color: #ddd; background: #600 }
-.linkflair-spoiler a.title:hover { text-shadow: 0 0 0.2em #c11, 0 0 0.2em #c11, 0 0 0.2em #c11; color: #000 !important }
-.listing-page .linkflair-spoiler .thumbnail img { opacity: 0 }	/* hide the thumbnail on spoiler linkflair */
+/* weekly episode threads */
+.linkflair-lw .thumbnail {
+	background: url(%%assets%%) -180px -320px no-repeat !important;
+}
+.linkflair-lw .linkflairlabel {
+	background: #282;
+}
+/* spoiler flair */
+.listing-page .linkflair-spoiler .thumbnail {	/* use the red "B" thumbnail */
+	background: url(%%assets%%) -110px -320px no-repeat !important;
+}
+.listing-page .linkflair-spoiler .thumbnail img {		/* and hide real thumbnail */
+	opacity: 0;	 /* we don't use display:none because we still want it to take up space */
+}
+.linkflair-spoiler .linkflairlabel {
+	color: #ddd;
+	background: #600;
+}
+.linkflair-spoiler a.title:hover {	/* fancy hover effect, so users know they're about to click a spoiler */
+	text-shadow: 0 0 0.2em #c11, 0 0 0.2em #c11, 0 0 0.2em #c11;
+	color: #000 !important;
+}
 
 
 /* "B" thumbnails */
-.thumbnail.self, .thumbnail.default { background: url(%%assets%%) -40px -320px no-repeat }
-.thumbnail { max-height: 50px }	/* it looks weird if the thumbnail is taller than the textual element beside it */
-.listing-page .thing { min-height: 60px } /* but don't let things be small just because the thumbnails are capped at 50px */
+.thumbnail.self,
+.thumbnail.default {
+	background: url(%%assets%%) -40px -320px no-repeat;
+}
+
+.thumbnail {	/* it looks weird if the thumbnail is taller than the textual element beside it */
+	max-height: 50px
+}
+.listing-page .thing { /* but don't let things be small just because the thumbnails are capped at 50px */
+	min-height: 60px
+}
 
 
 /* some RES elements */
