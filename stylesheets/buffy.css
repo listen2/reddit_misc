@@ -180,17 +180,36 @@ a[href="#sidebar_pic"] {
 
 /* upstakes and downstakes */
 
-.midcol { margin-left: 12px }
-.link .midcol { padding-right: 10px }
-.arrow { width: 16px; height: 18px; background-image: url(%%assets%%) !important }
-.upmod { background-position: 0 -320px !important }
-.downmod { background-position: 0 -342px !important }
-.up { background-position: -16px -320px !important }
-.down { background-position: -16px -342px !important }
-.score { margin-left: 1px }
+.midcol {
+	margin-left: 12px;
+}
+.link .midcol {
+	padding-right: 10px;
+}
+.arrow {
+	width: 16px;
+	height: 18px;
+	background-image: url(%%assets%%) !important;
+}
+.upmod {
+	background-position: 0 -320px !important;
+}
+.downmod {
+	background-position: 0 -342px !important;
+}
+.up {
+	background-position: -16px -320px !important;
+}
+.down {
+	background-position: -16px -342px !important;
+}
+.score {
+	margin-left: 1px;
+}
 
 
-#link-desc::after, #text-desc::after {
+#link-desc::after,
+#text-desc::after {
 	display: block;
 	margin-top: 1em;
 	font-weight: bold;
@@ -203,19 +222,23 @@ a[href="#sidebar_pic"] {
 #mail {
 	background-image: url(%%assets%%) !important;
 	height: 16px;
-	display: inline-block
+	display: inline-block;
 }
-#mail.nohavemail { background-position: 0 -300px }
-#mail.havemail { background-position: -16px -300px }
+#mail.nohavemail {
+	background-position: 0 -300px;
+}
+#mail.havemail {
+	background-position: -16px -300px;
+}
 
 
 /* hide "created by" in the sidebar */
-
-.bottom { display: none }
+.bottom {
+	display: none;
+}
 
 
 /* username styling for special users */
-
 .author[href$="/ClareKramer"]::before {
 	background: url(%%assets%%) -40px -290px no-repeat;
 	content: "";
@@ -224,19 +247,29 @@ a[href="#sidebar_pic"] {
 	display: inline-block;
 	position: relative;
 	top: 2px;
-	margin-right: 2px
+	margin-right: 2px;
 }
-.author[href$="/ClareKramer"] { color: #000 !important }
+.author[href$="/ClareKramer"] {
+	color: #000 !important;
+}
 
 
-.flair { color: #500 }	/* userflair text */
+.flair {		/* userflair text */
+	color: #500;
+}
 
 
 /* announcement sticky */
 
-div.content { margin-top: 56px }	/* make some space above the main content */
-.side { margin-top: -43px } /* move the sidebar down, too */
-.titlebox form { position: static }
+div.content {		/* make some space above the main content */
+	margin-top: 56px;
+}
+.side {	 /* move the sidebar down, too */
+	margin-top: -43px;
+}
+.titlebox form {
+	position: static;
+}
 .side h3:nth-of-type(1) {
 	position: absolute;
 	display: block;
