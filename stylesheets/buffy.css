@@ -55,8 +55,20 @@ a[href="/spoiler"]:hover, .comment .md p > a[href="/spoiler"]:hover, .usertext-b
 	color: #fff !important;
 	text-decoration: none
 }
-a[href="#s"], .md p > a[href="#s"] { text-decoration: none !important; cursor: default; background: #000; color: #fff !important; display: inline-block }
-a[href="#s"]::after, .md p > a[href="#s"]::after { font-size: small; content: attr(title); color: #000; padding: 0 0.5em; visibility: visible }
+a[href="#s"], .md p > a[href="#s"] {
+	text-decoration: none !important;
+	cursor: default;
+	background: #000;
+	color: #fff !important;
+	display: inline-block
+}
+a[href="#s"]::after, .md p > a[href="#s"]::after {
+	font-size: small;
+	content: attr(title);
+	color: #000;
+	padding: 0 0.5em;
+	visibility: visible
+}
 a[href="#s"]:hover, .md p > a[href="#s"]:hover { color: #fff !important }
 a[href="#s"]:hover::after, a[href="#s"]:active::after, .md p > a[href="#s"]:hover::after, .md p > a[href="#s"]:active::after { color: #fff }
 
@@ -237,8 +249,13 @@ a[href$="/reddits/create"] {
 #header-bottom-right .separator { color: #ddd }
 #header-bottom-right .user { margin: 0 !important }
 #header-bottom-right a, .userkarma { color: #ddd }
-.userbarHide { border: none !important; color: #ddd !important; background: none !important; left: -14px !important; top: 3px !important }
-.userbarShow { border: none !important; color: #ddd !important; background: none !important; left: -14px !important; top: 3px !important }
+.userbarHide, .userbarShow {		/* RES element to hide/show the userbar */
+	border: none !important;
+	color: #ddd !important;
+	background: none !important;
+	left: -14px !important;
+	top: 3px !important
+}
 
 
 
@@ -266,17 +283,17 @@ a[href$="/reddits/create"] {
 }
 
 
-#searchexpando {
+#searchexpando {					/* the search popup */
 	border: 1px solid #600;
 	background: #ddd
 }
-#search {
+#search {							/* the search form */
 	position: relative;
 	z-index: 100;
 	top: -2px;
 	right: 2px
 }
-#search input[name="q"] {
+#search input[name="q"] {		/* the search box itself */
 	border: 1px solid #e80;
 	border-radius: 4px;
 	background-repeat: repeat-x;
@@ -287,7 +304,7 @@ a[href$="/reddits/create"] {
 	width: 290px
 }
 
-/* real trophy case */
+/* Create a trophy case like the one on user overview pages */
 .usertext-body h1:nth-last-of-type(1) {
 	color: #808080;
 	font-size: 130%;
@@ -332,6 +349,7 @@ a[href$="/reddits/create"] {
 .usertext-body table:nth-last-of-type(1) tr:nth-of-type(7) td:nth-of-type(1) { background-position: 55px -240px }
 .usertext-body table:nth-last-of-type(1) tr:nth-of-type(7) td:nth-of-type(2) { background-position: 55px -280px }
 
+
 /* random quotes
 See https://github.com/listen2/reddit_misc/blob/master/README.md for more info */
 input[name="uh"] ~ a::after, .user::before {
@@ -349,6 +367,7 @@ input[name="uh"] ~ a::after, .user::before {
 	text-align: left;
 	vertical-align: middle
 }
+/* draw an invisible box over the quote so users don't click on it and log themselves out */
 .user::before {
 	z-index: 10;
 	content: " ";
@@ -357,6 +376,7 @@ input[name="uh"] ~ a::after, .user::before {
 	height: 45px;
 	width: 505px
 }
+/* From here to EOF is generated code for the quotes */
 input[name="uh"][value^="b3"] ~ a::after { content: "I love what you've, um, neglected to do with the place." }
 input[name="uh"][value^="a3"] ~ a::after { content: "We've seen each other at parties." }
 input[name="uh"][value^="93"] ~ a::after { content: "They got... the mustard... out!" }
