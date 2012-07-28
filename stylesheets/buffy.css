@@ -1,17 +1,17 @@
-.titlebox .word { display: none }
-.titlebox .number::before { content: "Welcome to Sunnydale. Population: " }
+.titlebox .word { display: none }	/* hide the default "readers" */
+.titlebox .number::before { content: "Welcome to Sunnydale. Population: " } /* insert our own text before the number */
 
-.helplink { font-size: 0; content: ""; margin-top: 0 !important }
+.helplink { font-size: 0; content: ""; margin-top: 0 !important }	/* hide "message the mods" */
 .helplink::before { font-size: small; content: "message the gang" }
-.helplink + div h1 { font-size: 0; content: "" }
+.helplink + div h1 { font-size: 0; content: "" }	/* hide "moderators" */
 .helplink + div h1::before { font-size: 14px; content: "Scooby Gang" }
 
-/* header color and border */
+/* header bar. color, background image, and a slight shadow */
 #header-bottom-left { background: #600 url(%%header3%%) no-repeat; height: 75px; box-shadow: 0 0 6px #555 }
 #sr-header-area { border: 0 }
 #header { border: 0; border-bottom: 1px }
-.pagename a { position: relative; bottom: 2px; color: #ddd }
-.side .redditname { display: none }
+.pagename a { position: relative; bottom: 2px; color: #ddd } /* the subreddit name next to the Snoo */
+.side .redditname { display: none }	/* the subreddit name in the sidebar */
 
 /* link colors */
 a, .tagline a, .thing .title, .thing .title.loggedin { color: #c11 }
@@ -23,10 +23,10 @@ a.author:hover, .thing .md p > a:visited:hover { color: #e80 !important }
 
 .buttons a { color: #666 !important }
 .commentarea .menuarea, .tagline { color: #666 }
-.newComments { color: #c11 !important }
-.likes div.score.likes { color: #c11 }
-.link div.score.dislikes { color: #444 }
-.flat-list .selected a { color: #c11 }
+.newComments { color: #c11 !important }	/* RES new comment count */
+.likes div.score.likes { color: #c11 }		/* score if user upvoted */
+.link div.score.dislikes { color: #444 }	/* score if user downvoted */
+.flat-list .selected a { color: #c11 }		/* the selected one of "new | rising" */
 
 .md { border-color: #444 !important }
 .linkinfo { background: #ddd; border-color: #444 }
@@ -111,9 +111,7 @@ a[href="#sidebar_pic"] {
 }
 .author[href$="/ClareKramer"] { color: #000 !important }
 
-.flair {
-	color: #500
-}
+.flair { color: #500 }	/* userflair text */
 
 /* announcement sticky */
 div.content { margin-top: 56px }	/* make some space above the main content */
@@ -164,9 +162,7 @@ div.content { margin-top: 56px }	/* make some space above the main content */
 }
 
 /* hide the old submit and create buttons */
-.sidebox.submit { display: none }
-.sidebox.create { display: none }
-.nub { display: none }
+.sidebox.submit, .sidebox.create, .nub { display: none }
 /* new submit button */
 a[href$="/r/buffy/submit"], a[href$="/reddits/create"] {
 	display: inline-block;
@@ -180,8 +176,6 @@ a[href$="/r/buffy/submit"], a[href$="/reddits/create"] {
 	color: #c11;
 	font-weight: bold;
 	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
 	margin-bottom: 5px
 }
 /* new create button */
@@ -207,12 +201,12 @@ a[href$="/reddits/create"] {
 .listing-page .linkflair-spoiler .thumbnail { background: url(%%assets%%) -110px -320px no-repeat !important }
 .linkflair-spoiler .linkflairlabel { color: #ddd; background: #600 }
 .linkflair-spoiler a.title:hover { text-shadow: 0 0 0.2em #c11, 0 0 0.2em #c11, 0 0 0.2em #c11; color: #000 !important }
-.listing-page .linkflair-spoiler .thumbnail img { opacity: 0 }
+.listing-page .linkflair-spoiler .thumbnail img { opacity: 0 }	/* hide the thumbnail on spoiler linkflair */
 
 /* "B" thumbnails */
 .thumbnail.self, .thumbnail.default { background: url(%%assets%%) -40px -320px no-repeat }
-.thumbnail { max-height: 50px }
-.listing-page .thing { min-height: 60px }
+.thumbnail { max-height: 50px }	/* it looks weird if the thumbnail is taller than the textual element beside it */
+.listing-page .thing { min-height: 60px } /* but don't let things be small just because the thumbnails are capped at 50px */
 
 /* some RES elements */
 #REScommentSubToggle { color: #600 !important }
