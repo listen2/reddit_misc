@@ -55,6 +55,7 @@ a[href="/spoiler"]:hover, .comment .md p > a[href="/spoiler"]:hover, .usertext-b
 	color: #fff !important;
 	text-decoration: none
 }
+/* these spoiler tags degrade gracefully AND work on mobile devices. See http://www.reddit.com/r/csshelp/comments/x18bx/ */
 a[href="#s"], .md p > a[href="#s"] {
 	text-decoration: none !important;
 	cursor: default;
