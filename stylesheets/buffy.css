@@ -116,7 +116,7 @@ a.author:hover,	/* hovered usernames */
 }
 .infobar {
 	border: 1px solid #600;
-	background: #ddd
+	background: #ddd;
 }
 .formtabs-content { border-top: 4px solid #500 }
 
@@ -130,7 +130,7 @@ a[href="/spoiler"],
 	overflow: hidden;
 	background: #000;
 	color: #000 !important;
-	cursor: default
+	cursor: default;
 }
 a[href="/spoiler"]:hover,
 .comment .md p > a[href="/spoiler"]:hover,
@@ -270,7 +270,7 @@ div.content {		/* make some space above the main content */
 .titlebox form {
 	position: static;
 }
-.side h3:nth-of-type(1) {
+.side h3:nth-of-type(1) {	/* select the first <h3> in the sidebar */
 	position: absolute;
 	display: block;
 	top: 92px;
@@ -284,7 +284,7 @@ div.content {		/* make some space above the main content */
 	width: 50%;
 	padding: 7px 0 7px 40px
 }
-.side h3:nth-of-type(1)::before {
+.side h3:nth-of-type(1)::before {	/* add an image to the left of the announcement */
 	content: url(%%giles%%);
 	position: absolute;
 	margin-top: -9px;
@@ -337,7 +337,7 @@ a[href$="/reddits/create"] {
 	color: #c11;
 	font-weight: bold;
 	border-radius: 5px;
-	margin-bottom: 5px
+	margin-bottom: 5px;
 }
 /* new create button */
 a[href$="/reddits/create"] {
@@ -391,10 +391,10 @@ a[href$="/reddits/create"] {
 }
 
 .thumbnail {	/* it looks weird if the thumbnail is taller than the textual element beside it */
-	max-height: 50px
+	max-height: 50px;
 }
 .listing-page .thing { /* but don't let things be small just because the thumbnails are capped at 50px */
-	min-height: 60px
+	min-height: 60px;
 }
 
 

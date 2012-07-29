@@ -1,32 +1,109 @@
-.titlebox .word { display: none }
-.titlebox .number::after { content: " open cases" }
+/*!
+ * If you're reading this code on reddit, you're seeing a minified version. An easy-to-read, annotated copy
+ * is available at https://github.com/listen2/reddit_misc/tree/master/stylesheets
+ *
+ * Note that some elements are hidden by setting ``font-size`` to 0. That's because some browsers don't yet
+ * comply with the CSS3 Generated and Replaced Content Module (which is in "Working Draft" status at W3C.
+ * Once this is supported, we can hide elements simply by setting the ``content`` attribute.
+ *
+ * Some terminology:
+ * 	"thing" is a reddit technical term for either a submission, comment, or entry on a listing-page.
+ *
+ */
 
-.helplink { font-size: 0; content: ""; margin-top: 0 !important }
-.helplink::before { font-size: small; content: "message the team" }
-.helplink + div h1 { font-size: 0; content: "" }
-.helplink + div h1::before { font-size: 14px; content: "Angel's Avengers" }
+/* Hide some text elements so we can replace them with our own text */
 
-/* header color and border */
-#header-bottom-left { background: #005 url(%%header4b%%) no-repeat; height: 75px; box-shadow: 0 0 6px #555 }
-#sr-header-area { border: 0 }
-#header { border: 0; border-bottom: 1px }
-.pagename a { position: relative; bottom: 2px; color: #eee }
-.side .redditname { display: none }
+.titlebox .word {		/* hide the default "readers" */
+	display: none;
+}
+.titlebox .number::after {		/* insert our own text before the number */
+	content: " open cases";
+}
 
-/* link colors */
-a, .tagline a, .thing .title, .thing .title.loggedin { color: #008 }
-a:hover { color: #a80; text-decoration: underline }
-.thing .title:hover, .thing .title.loggedin:visited:hover, .thing a:visited:hover, .single-page .thing a.title:hover, .tagline a:hover { color: #a80 }
-a.author:hover, .thing .md p > a:visited:hover { color: #a80 !important }
-.thing .title:visited, .thing .title.loggedin:visited { color: #444 }
-.thing .md p > a:visited { color: #444 !important }
+.helplink {		/* hide "message the mods" */
+	font-size: 0;
+	content: "";
+	margin-top: 0 !important;
+}
+.helplink::before {
+	font-size: small;
+	content: "message the team";
+}
+.helplink + div h1 {	/* hide "moderators" */
+	font-size: 0;
+	content: "";
+}
+.helplink + div h1::before {
+	font-size: 14px;
+	content: "Angel's Avengers";
+}
 
-.buttons a { color: #666 !important }
+
+/* style the header bar */
+
+#header-bottom-left {
+	background: #005 url(%%header4b%%) no-repeat;	/* the image has a transparent background */
+	height: 75px;
+	box-shadow: 0 0 6px #555;	/* add a slight shadow, which is only visible on the bottom edge */
+}
+#sr-header-area {
+	border: 0;
+}
+#header {
+	border: 0;
+	border-bottom: 1px;
+}
+.pagename a {		/* the subreddit name next to the Snoo */
+	position: relative;
+	bottom: 2px;
+	color: #eee;
+}
+.side .redditname {	/* the subreddit name in the sidebar */
+	display: none;
+}
+
+
+/* link colors. The reason some classes appear redundant is because the default stylesheet overrides some
+ * elements by using more specific selectors. I added more classes instead of just putting !important on
+ * everything. */
+
+a,		/* links in general */
+.tagline a,	/* usernames (this might be a RES class?) */
+.thing .title,	/* thing titles */
+.thing .title.loggedin {	/* thing titles for logged-in users */
+	color: #008;
+}
+a:hover {	/* hovered links in general */
+	color: #a80;
+	text-decoration: underline;
+}
+.thing .title:hover,
+.thing .title.loggedin:visited:hover,
+.thing a:visited:hover,
+.single-page .thing a.title:hover,
+.tagline a:hover {
+	color: #a80;
+}
+a.author:hover,	/* hovered usernames */
+.thing .md p > a:visited:hover {	/* visited, hovered links in message bodies */
+	color: #a80 !important;
+}
+.thing .title:visited,
+.thing .title.loggedin:visited {
+	color: #444;
+}
+.thing .md p > a:visited {	/* visited links in message bodies */
+	color: #444 !important;
+}
+
+.buttons a {	/* the "share, source, permalink, etc." links under comments and OPs */
+	color: #666 !important;
+}
 .commentarea .menuarea, .tagline { color: #666 }
-.newComments { color: #a07 !important }
-.likes div.score.likes { color: #a80 }
-.link div.score.dislikes { color: #444 }
-.flat-list .selected a { color: #a07 }
+.newComments { color: #a07 !important }	/* RES new comment count */
+.likes div.score.likes { color: #a80 }		/* score if user upvoted */
+.link div.score.dislikes { color: #444 }	/* score if user downvoted */
+.flat-list .selected a { color: #a07 }		/* the selected one of "new | rising" */
 
 .md { border-color: #444 !important }
 .linkinfo { background: #ddd; border-color: #444 }
@@ -39,56 +116,100 @@ a.author:hover, .thing .md p > a:visited:hover { color: #a80 !important }
 }
 .infobar {
 	border: 1px solid #005;
-	background: #eee
+	background: #eee;
 }
 .formtabs-content { border-top: 4px solid #005 }
 
+
 /* spoiler tags */
-a[href="/spoiler"], .comment .md p > a[href="/spoiler"], .usertext-body .md p > a[href="/spoiler"] {
+
+a[href="/spoiler"],
+.comment .md p > a[href="/spoiler"],
+.usertext-body .md p > a[href="/spoiler"] {
 	display: inline-block;
 	overflow: hidden;
 	background: #000;
 	color: #000 !important;
-	cursor: default
+	cursor: default;
 }
-a[href="/spoiler"]:hover, .comment .md p > a[href="/spoiler"]:hover, .usertext-body .md p > a[href="/spoiler"]:hover {
+a[href="/spoiler"]:hover,
+.comment .md p > a[href="/spoiler"]:hover,
+.usertext-body .md p > a[href="/spoiler"]:hover {
 	color: #fff !important;
 	text-decoration: none
 }
-a[href="#s"], .md p > a[href="#s"] { text-decoration: none !important; cursor: default; background: #000; color: #fff !important; display: inline-block }
-a[href="#s"]::after, .md p > a[href="#s"]::after { font-size: small; content: attr(title); color: #000; padding: 0 0.5em; visibility: visible }
-a[href="#s"]:hover, .md p > a[href="#s"]:hover { color: #fff !important }
-a[href="#s"]:hover::after, a[href="#s"]:active::after, .md p > a[href="#s"]:hover::after, .md p > a[href="#s"]:active::after { color: #fff }
+
+/* these spoiler tags degrade gracefully AND work on mobile devices. See http://www.reddit.com/r/csshelp/comments/x18bx/ */
+a[href="#s"],
+.md p > a[href="#s"] {
+	text-decoration: none !important;
+	cursor: default;
+	background: #000;
+	color: #fff !important;
+	display: inline-block;
+}
+a[href="#s"]::after,
+.md p > a[href="#s"]::after {
+	content: attr(title);
+	color: #000;
+	padding: 0 0.5em;
+	visibility: visible;
+}
+a[href="#s"]:hover,
+.md p > a[href="#s"]:hover {
+	color: #fff !important;
+}
+a[href="#s"]:hover::after,
+a[href="#s"]:active::after,
+.md p > a[href="#s"]:hover::after,
+.md p > a[href="#s"]:active::after {
+	color: #fff;
+}
+
 
 /* sidebar pics */
+
 a[href="#sidebar_pic"] {
 	display: inline-block;
 	background: url(%%assets%%) 0 0 no-repeat;
 	height: 208px;
 	width: 298px;
-	border: 1px solid #005
+	border: 1px solid #005;
 }
 
-/* upstakes and downstakes */
-.arrow.upmod { background: url(%%assets%%) -15px -362px no-repeat; }
-.arrow.downmod { background: url(%%assets%%) 0 -362px no-repeat; }
 
-#link-desc::after, #text-desc::after {
+/* upvotes and downvotes */
+.arrow.upmod {
+	background: url(%%assets%%) -15px -362px no-repeat;
+}
+.arrow.downmod {
+	background: url(%%assets%%) 0 -362px no-repeat;
+}
+
+
+#link-desc::after,
+#text-desc::after {
 	display: block;
 	margin-top: 1em;
 	font-weight: bold;
 	content: "Thanks for checking up on the Scoobies! If you don't see your submission in the 'new' section, the Big Bads could have marked it as spam. If it doesn't show up after 30 minutes, please contact the Gang via mod mail so they can allow your post to enter the 'Verse!"
 }
 
+
 /* mail indicator */
+
 #mail.havemail {
 	background-image: url(%%assets%%) !important;
 	background-position: 0 -300px;
-	display: inline-block
+	display: inline-block;
 }
 
+
 /* hide "created by" in the sidebar */
-.bottom { display: none }
+.bottom {
+	display: none;
+}
+
 
 /* username styling for special users */
 .author[href$="/ClareKramer"]::before {
@@ -99,19 +220,30 @@ a[href="#sidebar_pic"] {
 	display: inline-block;
 	position: relative;
 	top: 2px;
-	margin-right: 2px
+	margin-right: 2px;
 }
-.author[href$="/ClareKramer"] { color: #000 !important }
+.author[href$="/ClareKramer"] {
+	color: #000 !important;
+}
 
-.flair {
+
+.flair {		/* userflair text */
 	color: #005;
 }
 
+
 /* announcement sticky */
-div.content { margin-top: 56px }	/* make some space above the main content */
-.side { margin-top: -43px } /* move the sidebar down, too */
-.titlebox form { position: static }
-.side h3:nth-of-type(1) {
+
+div.content {		/* make some space above the main content */
+	margin-top: 56px;
+}
+.side {	 /* move the sidebar down, too */
+	margin-top: -43px;
+}
+.titlebox form {
+	position: static;
+}
+.side h3:nth-of-type(1) {	/* select the first <h3> in the sidebar */
 	position: absolute;
 	display: block;
 	top: 92px;
@@ -125,12 +257,13 @@ div.content { margin-top: 56px }	/* make some space above the main content */
 	width: 50%;
 	padding: 7px 0 7px 40px
 }
-.side h3:nth-of-type(1)::before {
+.side h3:nth-of-type(1)::before {	/* add an image to the left of the announcement */
 	content: url(%%cordy3%%);
 	position: absolute;
 	margin-top: -9px;
 	margin-left: -65px
 }
+
 
 /* table for the two-column related subreddits */
 .side table {
@@ -145,6 +278,7 @@ div.content { margin-top: 56px }	/* make some space above the main content */
 	display: none
 }
 
+
 /* sidebar horiz divider */
 .side hr {
 	background-image: url(%%assets%%);
@@ -156,16 +290,23 @@ div.content { margin-top: 56px }	/* make some space above the main content */
 	margin-bottom: 4px;
 	text-align: center
 }
-.side hr:nth-of-type(odd) { background-position: 0 -210px; }
-.side hr:nth-of-type(even) { background-position: 0 -230px; }
+.side hr:nth-of-type(odd) {
+	background-position: 0 -210px;
+}
+.side hr:nth-of-type(even) {
+	background-position: 0 -230px;
+}
 
 
 /* hide the old submit and create buttons */
-.sidebox.submit { display: none }
-.sidebox.create { display: none }
-.nub { display: none }
+.sidebox.submit,
+.sidebox.create,
+.nub {
+	display: none;
+}
 /* new submit button */
-a[href$="/r/angel/submit"], a[href$="/reddits/create"] {
+a[href$="/r/angel/submit"],
+a[href$="/reddits/create"] {
 	display: inline-block;
 	border: 1px solid #444;
 	background: #ddd url(%%assets%%) no-repeat 5px -250px;
@@ -178,16 +319,14 @@ a[href$="/r/angel/submit"], a[href$="/reddits/create"] {
 	font-weight: bold;
 	padding-right: 30px;
 	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px
 }
 /* new create button */
 a[href$="/reddits/create"] {
 	font-size: 14pt;
-	text-indent: 5%;
 	padding-right: 30px;
 	line-height: 1em;
-	width: 268px
+	width: 268px;
+	text-indent: 5%;
 }
 
 .flair-blackthorn + .userattrs {
@@ -200,6 +339,8 @@ a[href$="/reddits/create"] {
 }
 
 /* link flair */
+
+/* universal */
 .linkflairlabel {
 	border: 1px solid #005;
 	border-radius: 3px;
@@ -209,17 +350,43 @@ a[href$="/reddits/create"] {
 	border-color: #000;
 	max-width: 9999px !important
 }
-.linkflair-lw .thumbnail { background: url(%%assets%%) -180px -320px no-repeat !important }
-.linkflair-lw .linkflairlabel { background: #282 }
-.listing-page .linkflair-spoiler .thumbnail { background: url(%%assets%%) -110px -320px no-repeat !important }
-.linkflair-spoiler .linkflairlabel { color: #eee; background: #a07 }
-.linkflair-spoiler a.title:hover { text-shadow: 0 0 0.2em #a07, 0 0 0.2em #a07, 0 0 0.2em #a07; color: #000 !important }
-.listing-page .linkflair-spoiler .thumbnail img { opacity: 0 }
+/* weekly episode threads */
+.linkflair-lw .thumbnail {
+	background: url(%%assets%%) -180px -320px no-repeat !important;
+}
+.linkflair-lw .linkflairlabel {
+	background: #282;
+}
+/* spoiler flair */
+.listing-page .linkflair-spoiler .thumbnail {	/* use the purple lobster thumbnail */
+	background: url(%%assets%%) -110px -320px no-repeat !important;
+}
+.listing-page .linkflair-spoiler .thumbnail img {		/* and hide real thumbnail */
+	opacity: 0;	 /* we don't use display:none because we still want it to take up space */
+}
+.linkflair-spoiler .linkflairlabel {
+	color: #eee;
+	background: #a07;
+}
+.linkflair-spoiler a.title:hover {	/* fancy hover effect, so users know they're about to click a spoiler */
+	text-shadow: 0 0 0.2em #a07, 0 0 0.2em #a07, 0 0 0.2em #a07;
+	color: #000 !important;
+}
 
-/* "B" thumbnails */
-.thumbnail.self, .thumbnail.default { background: url(%%assets%%) -40px -320px no-repeat }
-.thumbnail { max-height: 50px }
-.listing-page .thing { min-height: 60px }
+
+/* lobster thumbnails */
+.thumbnail.self,
+.thumbnail.default {
+	background: url(%%assets%%) -40px -320px no-repeat;
+}
+
+.thumbnail {	/* it looks weird if the thumbnail is taller than the textual element beside it */
+	max-height: 50px;
+}
+.listing-page .thing { /* but don't let things be small just because the thumbnails are capped at 50px */
+	min-height: 60px;
+}
+
 
 /* some RES elements */
 #REScommentSubToggle { color: #005 !important }
@@ -245,19 +412,22 @@ a[href$="/reddits/create"] {
 	top: 18px !important;
 	right: 0;
 	padding: 4px 10px;
-	border-radius: 0
+	border-radius: 0;
 }
 #header-bottom-right .separator { color: #eee }
 #header-bottom-right .user { margin: 0 !important }
 #header-bottom-right a, .userkarma { color: #eee }
-.userbarHide { border: none !important; color: #eee !important; background: none !important; left: -14px !important }
-.userbarShow { border: none !important; color: #eee !important; background: none !important; left: -14px !important }
-
+.userbarHide, .userbarShow {
+	border: none !important;
+	color: #eee !important;
+	background: none !important;
+	left: -14px !important;
+}
 
 
 .tabmenu {
 	position: relative;
-	bottom: 1px
+	bottom: 1px;
 }
 .tabmenu li a, .tabmenu li.selected a {
 	position: relative;
@@ -270,26 +440,26 @@ a[href$="/reddits/create"] {
 	padding-left: 5px;
 	padding-right: 5px;
 	font-weight: normal;
-	color: #eee
+	color: #eee;
 }
 .tabmenu li.selected a {
 	border: 1px solid #a80;
 	background: #003;
-	color: #ca0 !important
+	color: #ca0 !important;
 }
 
 
-#searchexpando {
+#searchexpando {					/* the search popup */
 	border: 1px solid #008;
-	background: #eee
+	background: #eee;
 }
-#search {
+#search {							/* the search form */
 	position: relative;
 	z-index: 100;
 	top: -2px;
-	right: 2px
+	right: 2px;
 }
-#search input[name="q"] {
+#search input[name="q"] {		/* the search box itself */
 	border: 1px solid #a80;
 	border-radius: 4px;
 	background-repeat: repeat-x;
@@ -297,11 +467,14 @@ a[href$="/reddits/create"] {
 	font-size: 12px;
 	padding: 5px;
 	margin-bottom: 4px;
-	width: 290px
+	width: 290px;
 }
+
+
 
 /* random quotes
 See https://github.com/listen2/reddit_misc/blob/master/README.md for more info */
+
 input[name="uh"] ~ a::after, .user::before {
 	position: absolute;
 	top: 14px;
@@ -317,7 +490,7 @@ input[name="uh"] ~ a::after, .user::before {
 	text-align: left;
 	vertical-align: middle
 }
-.user::before {
+.user::before {	/* draw an invisible box over the quote so users don't click on it and log themselves out */
 	z-index: 10;
 	content: " ";
 	top: 15px;
@@ -325,6 +498,7 @@ input[name="uh"] ~ a::after, .user::before {
 	height: 45px;
 	width: 505px
 }
+/* From here to EOF is generated code for the quotes */
 input[name="uh"][value^="41"] ~ a::after { content: "You think you did me a favor? You damned me!" }
 input[name="uh"][value^="31"] ~ a::after { content: "I could pick the wisest and bravest knight in all the land and make him mine forever with a kiss." }
 input[name="uh"][value^="21"] ~ a::after { content: "I'm not gonna get a bat-nose like that, huh? Am I?" }
