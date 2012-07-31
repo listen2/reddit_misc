@@ -1,0 +1,2168 @@
+/* listen2: temporary glowy shit for the item raffle announcement */
+a[href="http://www.reddit.com/r/Diablo/comments/x9q6b/"] {
+	text-shadow: 0 0 2px #000, 0 0 9px #f33, 0 0 12px #f33;
+	color: #ddd !important
+}
+
+/**** hue hue *****/
+a[href="/#banhammer"] {
+	text-indent: -9999px;
+	display: inline-block;
+	background: url(%%banhammer%%);
+	height: 254px;
+	width: 448px;/**/
+}
+/****************************************************************************************************************
+			Extension styles
+****************************************************************************************************************/
+#chat-gem {
+	position: absolute;
+	top: 94px;
+	left: 760px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: url(%%hell-mail%%) 0px -16px;
+	z-index: 999;
+}
+#chat-gem.clicked {background-position: 0px 0px;}
+#chat-gem-info {
+	display: none;
+	opacity: 0.0;
+	position: absolute;
+	top: 114px;
+	left: 686px;
+	display: block;
+	border: 1px solid #444;
+	border-radius: 3px;
+	font-size: 16px;
+	color: #eee;
+	background-color: #000;
+	padding: 20px;
+}
+
+/****************************************************************************************************************
+			UNIVERSAL FIXES / UNIVERSAL STYLES
+****************************************************************************************************************/
+.cname #header {padding-top: 18px;}
+a[href="/s"] {display: none;}
+.link.promotedlink.promoted {
+	background-color: transparent;
+	border: none;
+}
+html #RESAccountSwitcherIcon {
+	height: auto;
+}
+html #RESMacroDropdown {
+	z-index: 999 !important;/**/
+}
+
+html #RESMacroDropdown a {
+	color: #fff;
+}
+/*********************
+*** Release date load bar ***
+**********************/
+.side a[href$="0p"], .side a[href$="0n"] {
+	text-indent: -9999px;
+	display: inline-block;
+	background: url(%%hell-release-load-bar%%);
+	height: 10px;
+}
+.side a[href$="0n"] { background-position: 0px -10px; background-position: bottom right;}
+.side a[href="/10p"], .side a[href="/10n"] { width: 10%}
+.side a[href="/20p"], .side a[href="/20n"] { width: 20%}
+.side a[href="/30p"], .side a[href="/30n"] { width: 30%}
+.side a[href="/40p"], .side a[href="/40n"] { width: 40%;}
+.side a[href="/50p"], .side a[href="/50n"] { width: 50%}
+.side a[href="/60p"], .side a[href="/60n"] { width: 60%;}
+.side a[href="/70p"], .side a[href="/70n"] { width: 70%;}
+.side a[href="/80p"], .side a[href="/80n"] { width: 80%;}
+.side a[href="/90p"], .side a[href="/90n"] { width: 90%;}
+.side a[href="/100p"], .side a[href="/100n"] { width: 100%;}
+
+/*************************
+*** Social media links ***
+*************************/
+.usertext-body .md hr:nth-of-type(2) + p { text-align: center; margin-bottom: 10px; }
+.side a[href="http://www.twitter.com/redditdiablo"] {
+	text-indent: -9999px;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url(%%hell-baked%%) -64px -107px no-repeat;
+}
+
+.side a[href="http://www.youtube.com/redditdiablo"] {
+	text-indent: -9999px;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url(%%hell-baked%%) -96px -107px no-repeat;
+}
+
+.side a[href="http://www.justin.tv/rdiablo"] {
+	text-indent: -9999px;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url(%%hell-baked%%) 0px -107px no-repeat;
+}
+
+.side a[href="http://steamcommunity.com/groups/rdiablo"] {
+	text-indent: -9999px;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url(%%hell-baked%%) -32px -107px no-repeat;
+}
+
+.side a[href="http://tinyurl.com/7ulkl6l"] {
+	color: white;
+/*padding: 5px;
+border-radius: 3px;*/
+/*text-shadow: 1px 1px 2px #000, -1px -1px 3px #000, 1px 0px 2px #000, -1px 0px 3px #000, 0px -1px 2px #000, 0px 1px 3px #000;*/
+text-shadow: 1px 1px 2px #080, -1px -1px 3px #080, 1px 0px 2px #080, -1px 0px 3px #080, 0px -1px 2px #080, 0px 1px 3px #080;
+display:inline-block;/*
+	background-image:-webkit-linear-gradient(red,orange,yellow,green,blue,purple);
+  background-image:-moz-linear-gradient(top,red,orange,yellow,green,blue,purple);
+  background-image: -ms-linear-gradient(red,orange,yellow,green,blue,purple);
+  background-image: -o-linear-gradient(red,orange,yellow,green,blue,purple);
+  background-image: linear-gradient(red,orange,yellow,green,blue,purple);
+box-shadow: 0px 0px 25px 0px #ff00ff;*/
+}
+
+/********************
+*** Flair Styling ***
+********************/
+
+html[lang^="en"] .comments-page .flat-list.buttons a.flairselectbtn {
+	font-size: 0px;
+	background: #000;
+	display: inline-block;
+	padding: 3px;
+	border: 1px solid #c00;
+}
+
+html[lang^="en"] .comments-page .flat-list.buttons a.flairselectbtn::before {
+	content: "Add flair to this post";
+	font-size: 12px;
+}
+html[lang^="en"] .flat-list.buttons a.flairselectbtn + .flairselector h2 {
+	display: none;
+}
+
+html[lang^="en"] .flat-list.buttons a.flairselectbtn + .flairselector form {
+	border-top: 0;
+}
+
+html[lang^="en"] .flat-list.buttons a.flairselectbtn + .flairselector .customizer { display:none; }
+html[lang^="en"] .flat-list.buttons a.flairselectbtn + .flairselector .customizer::before { content:""; }
+
+html[lang^="en"] .linkflairlabel, html[lang^="en"] .click-gadget .linkflair {
+	background: #111;
+	border: 1px solid #c00;
+	border-radius: 3px;
+	color: #ddd;
+	padding: 5px;
+	font-weight: bold;
+}
+
+html[lang^="en"] .click-gadget .linkflair {
+	font-size: x-small;
+	white-space: nowrap;
+	display: inline-block;
+	margin-right: 3px;
+}
+
+.linkflair .linkflairlabel {max-width: 9999px !important;}
+
+.linkflair-spoiler .linkflairlabel ~ a.title, .click-gadget .linkflair ~ a.reddit-link-title {opacity: 0.0;-moz-opacity:.0; filter:alpha(opacity=0);}
+.linkflair-spoiler .linkflairlabel ~ a.title:hover, .click-gadget .linkflair ~ a.reddit-link-title:hover {opacity: 1.0;-moz-opacity:1; filter:alpha(opacity=100);}
+
+html[lang^="en"] .linkflair-spoiler a.thumbnail {background: url(%%hell-baked%%) -459px -87px !important;}
+html[lang^="en"] .linkflair-spoiler a.thumbnail img { display: none !important;}
+html[lang="dd"] .linkflair-spoiler a.thumbnail { display: none !important; }
+html[lang="dd"] .linkflair-spoiler .entry { margin-left: 152px; }
+html[lang^="en"] .thing .title {color: #fff; }
+
+html[lang^="en"] .linkflair-barb .linkflairlabel {border-color: #700;}
+html[lang^="en"] .linkflair-barb a.thumbnail {background: url(%%class-portraits%%) 0px 0px !important;}
+
+html[lang^="en"] .linkflair-wizz .linkflairlabel {border-color: #077;}
+html[lang^="en"] .linkflair-wizz a.thumbnail {background: url(%%class-portraits%%) 0px -284px !important;}
+
+html[lang^="en"] .linkflair-dh .linkflairlabel {border-color: #7F41A3;}
+html[lang^="en"] .linkflair-dh a.thumbnail {background: url(%%class-portraits%%) 0px -142px !important;}
+
+html[lang^="en"] .linkflair-wd .linkflairlabel {border-color: #070;}
+html[lang^="en"] .linkflair-wd a.thumbnail {background: url(%%class-portraits%%) 0px -213px !important;}
+
+html[lang^="en"] .linkflair-monk .linkflairlabel {border-color: #770;}
+html[lang^="en"] .linkflair-monk a.thumbnail {background: url(%%class-portraits%%) 0px -71px !important;}
+
+html[lang^="en"] .linkflair-americas .linkflairlabel {border-color: #e1342d;}
+html[lang^="en"] .linkflair-americas a.thumbnail {background: url(%%linkflairthumbs%%) 0px 0px !important;}
+
+html[lang^="en"] .linkflair-europe .linkflairlabel {border-color: #5fcd26;}
+html[lang^="en"] .linkflair-europe a.thumbnail {background: url(%%linkflairthumbs%%) 0px -71px !important;}
+
+html[lang^="en"] .linkflair-asia .linkflairlabel {border-color: #b527d0;}
+html[lang^="en"] .linkflair-asia a.thumbnail {background: url(%%linkflairthumbs%%) 0px -142px !important;}
+
+html[lang^="en"] .linkflair-secrettome .linkflairlabel {border-color: #e5e5e5;}
+html[lang^="en"] .linkflair-secrettome a.thumbnail {background: url(%%bookofsecrets%%) !important;}
+
+html[lang^="en"] .linkflair-idea .linkflairlabel {border-color: #E0A148;}
+html[lang^="en"] .linkflair-idea a.thumbnail {background: url(%%heylisten%%) !important;}
+
+html[lang^="en"] .linkflair-craftpost .linkflairlabel {border-color: #C95216;}
+html[lang^="en"] .linkflair-craftpost a.thumbnail {background: url(%%craft-post%%) !important;}
+
+
+.flair {
+	padding: 0px;
+	margin: 0;
+	line-height: 20px;
+	vertical-align: bottom;
+	text-align: right; 
+	color: #eee;
+	background: url(%%class-baked-column%%) top left no-repeat #000;
+	min-width: 40px;
+	padding-right: 10px;
+	width: 40px;
+	height:20px;
+	position: relative;
+	z-index: 10;
+	opacity: 0.5;
+	overflow: hidden;
+	margin-right: 3px;
+	text-indent: 60px;
+	border: 1px solid #000;
+	border-radius: 2px;
+}
+
+.flair:hover {opacity: 1.0; width: auto;}
+.flair-monk {background-position: 0px 0px !important;}
+.flair-wizard {background-position: 0px -20px !important;}
+.flair-barb {background-position: 0px -40px !important;}
+.flair-witchdoc {background-position: 0px -60px !important;}
+.flair-demonhunt {background-position: 0px -80px !important;}
+
+.flair-monk-reddit {background-position: 0px -100px !important;}
+.flair-wizard-reddit {background-position: 0px -120px !important;}
+.flair-barb-reddit {background-position: 0px -140px !important;}
+.flair-witchdoc-reddit {background-position: 0px -160px !important;}
+.flair-demonhunt-reddit {background-position: 0px -180px !important;}
+
+.flair-monk-americas {background-position: 0px -200px !important;}
+.flair-wizard-americas {background-position: 0px -220px !important;}
+.flair-barb-americas {background-position: 0px -240px !important;}
+.flair-witchdoc-americas {background-position: 0px -260px !important;}
+.flair-demonhunt-americas {background-position: 0px -280px !important;}
+
+.flair-monk-asia {background-position: 0px -400px !important;}
+.flair-wizard-asia {background-position: 0px -420px !important;}
+.flair-barb-asia {background-position: 0px -440px !important;}
+.flair-witchdoc-asia {background-position: 0px -460px !important;}
+.flair-demonhunt-asia {background-position: 0px -480px !important;}
+
+.flair-monk-europe {background-position: 0px -300px !important;}
+.flair-wizard-europe {background-position: 0px -320px !important;}
+.flair-barb-europe {background-position: 0px -340px !important;}
+.flair-witchdoc-europe {background-position: 0px -360px !important;}
+.flair-demonhunt-europe {background-position: 0px -380px !important;}
+
+/* Trophy flair */
+.flair-tyrael-alt {background-position: 0px -500px !important;}
+.flair-tyrael {background-position: 0px -520px !important;}
+.flair-azmodan {background-position: 0px -540px !important;}
+.flair-diablo {background-position: 0px -560px !important;}
+.flair-tyrael-alt-reddit {background-position: 0px -580px !important;}
+.flair-tyrael-reddit {background-position: 0px -600px !important;}
+.flair-azmodan-reddit {background-position: 0px -620px !important;}
+.flair-diablo-reddit {background-position: 0px -640px !important;}
+
+.flair-tyrael-alt-americas {background-position: 0px -660px !important;}
+.flair-tyrael-americas {background-position: 0px -680px !important;}
+.flair-azmodan-americas {background-position: 0px -700px !important;}
+.flair-diablo-americas {background-position: 0px -720px !important;}
+
+.flair-tyrael-alt-europe {background-position: 0px -740px !important;}
+.flair-tyrael-europe {background-position: 0px -760px !important;}
+.flair-azmodan-europe {background-position: 0px -780px !important;}
+.flair-diablo-europe {background-position: 0px -800px !important;}
+
+.flair-tyrael-alt-asia {background-position: 0px -820px !important;}
+.flair-tyrael-asia {background-position: 0px -840px !important;}
+.flair-azmodan-asia {background-position: 0px -860px !important;}
+.flair-diablo-asia {background-position: 0px -880px !important;}
+
+
+.flair-bender {background: url(%%bender%%) no-repeat !important;}
+.flair-cain {
+	background: url(%%cain%%) !important;
+	width: 32px !important;
+	opacity: 1.0 !important;
+}
+.flair-idscroll + .userattrs {
+	background-image: url(%%Scroll-of-Identify%%);
+	background-repeat: no-repeat;
+	display: inline-block;
+	padding-left: 18px;
+	height: 18px;
+}
+.flair-dye + .userattrs:before {
+	content: " ";
+	background-image: url(%%dyes%%);
+	background-repeat: no-repeat;
+	display: inline-block;
+	padding-left: 20px;
+	height: 20px;
+}
+
+.flair-tanner + .userattrs:before {background-position: 0px 0px;}
+.flair-pale + .userattrs:before {background-position: -20px 0px;}
+.flair-winter + .userattrs:before {background-position: -40px 0px;}
+.flair-aquatic + .userattrs:before {background-position: -60px 0px;}
+.flair-cardinal + .userattrs:before {background-position: -80px 0px;}
+.flair-ranger + .userattrs:before {background-position: -100px 0px;}
+.flair-rogue + .userattrs:before {background-position: -120px 0px;}
+.flair-desert + .userattrs:before {background-position: -140px 0px;}
+.flair-autumn + .userattrs:before {background-position: -160px 0px;}
+.flair-lovely + .userattrs:before {background-position: -180px 0px;}
+.flair-summer + .userattrs:before {background-position: -200px 0px;}
+.flair-spring + .userattrs:before {background-position: -220px 0px;}
+.flair-elegant + .userattrs:before {background-position: -240px 0px;}
+.flair-forester + .userattrs:before {background-position: -260px 0px;}
+.flair-mariner + .userattrs:before {background-position: -280px 0px;}
+.flair-golden + .userattrs:before {background-position: -300px 0px;}
+.flair-royal + .userattrs:before {background-position: -320px 0px;}
+.flair-infernal + .userattrs:before {background-position: -340px 0px;}
+.flair-purity + .userattrs:before {background-position: -360px 0px;}
+.flair-abyssal + .userattrs:before {background-position: -380px 0px;}
+.flair-vanishing + .userattrs:before {background-position: -400px 0px;}
+.flair-remover + .userattrs:before {background-position: -420px 0px;}
+
+/**** Blizzard flair for employees ****/
+a.author[href$="reddit.com/user/bashiok_foreal"]:before, a.author[href$="reddit.com/user/JayPWilson"]:before, a.author[href$="reddit.com/user/wyattcheng"]:before, a.author[href$="reddit.com/user/andrewchambers"]:before, a.author[href$="reddit.com/user/lylirra"]:before, a.author[href$="reddit.com/user/Grimiku"]:before, a.author[href$="reddit.com/user/Brennvin"]:before, a.author[href$="reddit.com/user/Vaeflare"]:before, a.author[href$="reddit.com/user/Traysent"]:before, a.author[href$="reddit.com/user/Crithto"]:before, a.author[href$="reddit.com/user/Kaivax"]:before, a.author[href$="reddit.com/user/Rygarius"]:before, a.author[href$="reddit.com/user/Nethaera"]:before,
+a.author[href$="reddit.com/user/Aldrexus"]:before, a.author[href$="reddit.com/user/BlizzDaxxarri"]:before, a.author[href$="reddit.com/user/Zarhym"]:before {
+	content: url(%%blizz%%);
+	margin-left: 3px;
+	margin-right: 3px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+a.author[href$="reddit.com/user/bashiok_foreal"], a.author[href$="reddit.com/user/JayPWilson"], a.author[href$="reddit.com/user/wyattcheng"], a.author[href$="reddit.com/user/andrewchambers"], a.author[href$="reddit.com/user/lylirra"], a.author[href$="reddit.com/user/Grimiku"], a.author[href$="reddit.com/user/Brennvin"], a.author[href$="reddit.com/user/Vaeflare"], a.author[href$="reddit.com/user/Traysent"], a.author[href$="reddit.com/user/Crithto"], a.author[href$="reddit.com/user/Kaivax"], a.author[href$="reddit.com/user/Rygarius"], a.author[href$="reddit.com/user/Nethaera"], a.author[href$="reddit.com/user/Aldrexus"], a.author[href$="reddit.com/user/BlizzDaxxarri"], a.author[href$="reddit.com/user/Zarhym"] {
+	color: #00B4FF !important;
+}/**/
+
+
+/*****************************
+	Spoiler tag
+	- Xiphirx
+*****************************/
+a[href="/spoiler"]
+{
+	display: block;
+	overflow: hidden;
+	background: url(%%hell-spoiler%%) top center #000 no-repeat;
+	border-radius: 5px;
+	padding: 10px;
+	padding-top: 30px;
+	min-width: 273px;
+	cursor: default;
+	color: #000 !important;
+}
+
+a[href="/spoiler"]:hover
+{
+	color: #E3C4A8 !important;
+}
+
+html[lang="dd"] a[href="/spoiler"]
+{
+	background-color: #eee;
+	color: #eee !important;
+}
+
+html[lang="dd"] a[href="/spoiler"]:hover
+{
+	color: #000 !important;
+}
+
+span.keyNavAnnotation 
+{
+	display: none !important
+}
+
+/*****************************
+	Theme Selector
+	- Xiphirx
+*****************************/
+html[lang="dd"] body > div.side div.usertext-body .md a[href="http://www.reddit.com/r/Diablo"]
+{
+	font-size: 0px;
+	display: inline-block;
+	width: 139px;
+	height: 94px;
+	background: url(%%heaven-theme-selector%%);
+	float: right;
+}
+
+html[lang="dd"] body > div.side div.usertext-body .md a[href="http://dd.reddit.com/r/Diablo"]
+{
+	font-size: 0px;
+	display: inline-block;
+	width: 139px;
+	height: 94px;
+	background: url(%%heaven-theme-selector%%);
+	background-position: -140px 0px;
+	float:right;
+}
+
+html[lang="dd"] body > div.side div.usertext-body .md a[href="http://www.reddit.com/r/Diablo"]:hover
+{
+	background-position: 0px -94px;
+}
+
+html[lang="dd"] div.side div.usertext-body .md a[href="http://dd.reddit.com/r/Diablo"]:hover
+{
+	background-position: -140px -94px;
+}
+
+/****************************************************************************************************************
+			HELL THEME v2.0
+****************************************************************************************************************/
+html[lang^="en"] .arrow.down:hover::before {
+	content: "Please vote based on quality, not opinion. Posts may contribute to the discussion even if you disagree with the viewpoint.";
+	font-size: 10px;
+	max-width: 200px;
+	position: absolute;
+	top: 64px;
+	z-index: 9999;
+	display: block;
+	border-radius: 3px;
+	background-color: #000;
+	color: #A99877;
+	padding: 10px;
+	font-weight: normal;
+}
+
+/*
+html[lang^="en"] .toggle.report-button:hover:before {
+	content: "Please make sure this post violates the rules before clicking report. Thanks!";
+	font-size: 10px;
+	max-width: 400px;
+	position: absolute;
+	top: 64px;
+	z-index: 9999;
+	display: block;
+	border-radius: 3px;
+	background-color: #000;
+	color: #A99877;
+	padding: 10px;
+	font-weight: normal;
+}
+*/
+
+html[lang^="en"] .side a[href="/releaseCountdown"] {
+	font-size: 14px;
+	color: #F3E6D0;
+	border-radius: 3px;
+	border: 1px solid #222;
+	background: #111;
+	padding: 5px;
+	display: block;
+}
+/******************
+*** Random quotes ***
+*****************/
+html[lang^="en"] input[name="uh"] ~ a:after, html[lang^="en"] .user:before {
+	position: absolute;
+	top: 20px;
+	right: 400px;
+	width: 500px;
+	height: 70px;
+	font-style: italic;
+	font-size: 16px;
+	font-weight: normal;
+	color: #333;
+	z-index: 0;
+	display: block;
+	line-height: 16px;
+	text-align: center;
+	text-shadow: 0px 0px 5px #f5bf78, 0px 0px 5px #f5bf78, 0px 0px 5px #f5bf78;
+}
+html[lang^="en"] .user:before {z-index: 10; content: " ";top: 15px;right: 405px;height:75px;width:505px;}/**/
+html[lang^="en"] input[name="uh"][value^="a"] ~ a:after {content: "Hello my friend! Stay awhile, and listen!";}
+html[lang^="en"] input[name="uh"][value^="b"] ~ a:after {content: "Fool! You have just ensured the doom of this world.";}
+html[lang^="en"] input[name="uh"][value^="c"] ~ a:after {content: "Not even death can save you from me...";}
+html[lang^="en"] input[name="uh"][value^="d"] ~ a:after {content: "My brothers have escaped you.";}
+html[lang^="en"] input[name="uh"][value^="e"] ~ a:after {content: "My brothers will not have died in vain!";}
+html[lang^="en"] input[name="uh"][value^="f"] ~ a:after {content: "You thought you were so clever, that you would outwit us all.";}
+html[lang^="en"] input[name="uh"][value^="g"] ~ a:after {content: "There is no need for this debate to continue... or to have even begun.";}
+html[lang^="en"] input[name="uh"][value^="h"] ~ a:after {content: "Greetings, stranger. I'm not surprised to see your kind here.";}
+html[lang^="en"] input[name="uh"][value^="i"] ~ a:after {content: "You now speak to Ormus.";}
+html[lang^="en"] input[name="uh"][value^="j"] ~ a:after {content: "I sense a soul in search of answers...";}
+html[lang^="en"] input[name="uh"][value^="k"] ~ a:after {content: "Damn it, I wish you people would just leave me alone!";}
+html[lang^="en"] input[name="uh"][value^="l"] ~ a:after {content: "You dare to bring the warmth of life into my tomb?";}
+html[lang^="en"] input[name="uh"][value^="m"] ~ a:after {content: "You were a templar, Jondar! How could you succumb to this... Coven?";}
+html[lang^="en"] input[name="uh"][value^="n"] ~ a:after {content: "You have quite a treasure there in that Horadric Cube.";}
+html[lang^="en"] input[name="uh"][value^="o"] ~ a:after {content: "All who oppose me, beware. ";}
+html[lang^="en"] input[name="uh"][value^="p"] ~ a:after {content: "I will cleanse this wilderness.";}
+html[lang^="en"] input[name="uh"][value^="q"] ~ a:after {content: "I shall purge this land of the shadow.";}
+html[lang^="en"] input[name="uh"][value^="r"] ~ a:after {content: "Evil beware!";}
+html[lang^="en"] input[name="uh"][value^="s"] ~ a:after {content: "This monastery reeks with evil and corruption. ";}
+html[lang^="en"] input[name="uh"][value^="t"] ~ a:after {content: "Ahh... Fresh meat!";}
+html[lang^="en"] input[name="uh"][value^="u"] ~ a:after {content: "You'll pay for your atrocities, Baal.";}
+html[lang^="en"] input[name="uh"][value^="v"] ~ a:after {content: "Is that all? ";}
+html[lang^="en"] input[name="uh"][value^="w"] ~ a:after {content: "Tyrael was a fool to have trusted me!";}
+html[lang^="en"] input[name="uh"][value^="x"] ~ a:after {content: "Pleeeease, no hurt, no kill. Keep alive and next time good bring to you.";}
+html[lang^="en"] input[name="uh"][value^="y"] ~ a:after {content: "I'm Gheed and I can already tell that I'll be your best friend in this forsaken camp.";}
+html[lang^="en"] input[name="uh"][value^="z"] ~ a:after {content: "Oh, forgive me, Tyrael, please. It... wasn't my fault.";}
+html[lang^="en"] input[name="uh"][value^="0"] ~ a:after {content: "Die, maggot!";}
+html[lang^="en"] input[name="uh"][value^="1"] ~ a:after {content: "Looking for Baal!?";}
+html[lang^="en"] input[name="uh"][value^="2"] ~ a:after {content: "This place is thick with the stench of ghouls.";}
+html[lang^="en"] input[name="uh"][value^="3"] ~ a:after {content: "I'm sorry. Did I break your concentration?";}
+html[lang^="en"] input[name="uh"][value^="4"] ~ a:after {content: "Your madness ends here, betrayer! ";}
+html[lang^="en"] input[name="uh"][value^="5"] ~ a:after {content: "Rest in peace Leoric. I'll find your son. ";}
+html[lang^="en"] input[name="uh"][value^="6"] ~ a:after {content: "I can see what you see not / Vision milky then eyes rot";}
+html[lang^="en"] input[name="uh"][value^="7"] ~ a:after {content: "Adria was my mother, but I don't know much about her. She died when I was very young.";}
+html[lang^="en"] input[name="uh"][value^="8"] ~ a:after {content: "Soon™";}
+html[lang^="en"] input[name="uh"][value^="9"] ~ a:after {content: "Well, what can I do for ya?";}
+html[lang^="en"] input[name="uh"][value^="aa"] ~ a:after {content: "Hope remains within the hearts of men.";}
+html[lang^="en"] input[name="uh"][value^="ab"] ~ a:after {content: "So it begins...";}
+html[lang^="en"] input[name="uh"][value^="ac"] ~ a:after {content: "Betrayal can never be forgiven.";}
+html[lang^="en"] input[name="uh"][value^="ad"] ~ a:after {content: "Black magic bars our way, but the will of a Templar is stronger!";}
+html[lang^="en"] input[name="uh"][value^="ae"] ~ a:after {content: "Evil cowers at the sight of one templar. Two will bring it to its knees!";}
+html[lang^="en"] input[name="uh"][value^="af"] ~ a:after {content: "Beware, foul demons and beasts.";}
+html[lang^="en"] input[name="uh"][value^="ag"] ~ a:after {content: "All who oppose me... beware.";}
+html[lang^="en"] input[name="uh"][value^="ah"] ~ a:after {content: "I will not be denied!";}
+html[lang^="en"] input[name="uh"][value^="ai"] ~ a:after {content: "Halt!";}
+html[lang^="en"] input[name="uh"][value^="aj"] ~ a:after {content: "You may not pass.";}
+html[lang^="en"] input[name="uh"][value^="ak"] ~ a:after {content: "Stay out of trouble.";}
+html[lang^="en"] input[name="uh"][value^="al"] ~ a:after {content: "Hail to you, champion.";}
+html[lang^="en"] input[name="uh"][value^="am"] ~ a:after {content: "My vote is for them... for I would see what they might become... and marvel in it.";}
+html[lang^="en"] input[name="uh"][value^="an"] ~ a:after {content: "How do I know I can trust you? Hmm?";}
+html[lang^="en"] input[name="uh"][value^="ao"] ~ a:after {content: "Well, well. The siege has everything in short supply...except fools.";}
+html[lang^="en"] input[name="uh"][value$="moo"] ~ a:after {content: "Moo! Moo moo moo moo moo.";}
+
+/*************************
+*** Hell Theme v2.0 - Xiphirx ***
+*************************/
+html[lang^="en"] body {
+	background: url(%%hell-background%%) top left no-repeat #150F08;
+	color: #A99877;
+}
+
+html[lang^="en"] #sr-header-area {
+	position: relative;
+	z-index: 901;
+	width: 100%;
+}
+
+html[lang^="en"] .drop-choices {
+	z-index: 9999;
+}
+
+html[lang^="en"] a, html[lang^="en"] .tagline a {
+	color: #d95200;
+}
+
+html[lang^="en"] a:hover, html[lang^="en"] .tagline a:hover {
+	color: #F3E6D0;
+}
+
+html[lang^="en"] hr {
+	background: #111;
+	display: block;
+	width: 100%;
+	height: 2px;
+	border: none;
+}
+
+html[lang^="en"] #header {
+	background: transparent;
+	border-bottom: 0;
+	position: relative;
+	height: 154px;
+	z-index: auto;
+}
+
+html[lang^="en"] #header-bottom-left {
+	background: url(%%hell-header-bar%%) top left repeat-x;
+	background-position: -428px 0px;
+	height: 92px;
+}
+
+html[lang^="en"] #header-img-a {
+	position: absolute;
+	top: 30px;
+	left: 26px;
+	margin: 0;
+}
+
+html[lang^="en"] #header-img {
+	margin: 0;
+}
+
+html[lang^="en"] #header .pagename.redditname a {
+	background: url(%%hell-d3logo%%) 0px 0px no-repeat;
+	width: 383px;
+	height: 150px;
+	display: inline-block;
+	position: absolute;
+	left: 184px;
+	top: 4px;
+	text-indent: -9999px;
+	z-index: 100;
+}
+
+html[lang^="en"] #header .pagename.redditname a:hover {
+	background-position: 0px -150px;
+}
+
+html[lang^="en"] #header-bottom-right {
+	background: url(%%hell-baked%%) 0px -139px no-repeat;
+	width: 319px;
+	height: 45px;
+	position: absolute;
+	top: 87px !important;
+	right: 0px;
+	padding: 17px 30px;
+	border-radius: 0px;
+}
+
+html[lang^="en"] #header-bottom-right a {
+	text-shadow: 0px 1px 10px #111, 0px 1px 10px #111;
+}
+
+html[lang^="en"] #header-bottom-right .logout a {
+	font-weight: bold;
+}
+
+html[lang^="en"] #header-bottom-right .separator {
+	color: #000;
+}
+
+html[lang^="en"] #header-bottom-right .user {
+	margin: 0px !important;
+	color: #4f3928;
+}
+
+html[lang^="en"] #header-bottom-right .user a {
+	font-size: 18px;
+	color: #221103;
+	text-shadow: 0px 1px 10px #792525;
+}
+
+html[lang^="en"] #header-bottom-right .user .userkarma a {
+	font-size: 100%;/**/
+}
+
+html[lang^="en"] #header-bottom-right .user + .separator {
+	display: block;
+	text-indent: -9999px;
+	height: 19px;
+}
+
+html[lang^="en"] #header-bottom-left ul.tabmenu {
+	position: absolute;
+	bottom: -7px;
+	z-index: 200;
+}
+
+html[lang^="en"] #userbarToggle {
+	display: none !important;
+}
+
+html[lang^="en"] .side {
+	margin: 0px;
+	margin-top: 15px;
+	padding: 10px 26px;
+	background: url(%%hell-side-fill%%) top left repeat-y #181818;
+	width: 327px;
+}
+
+html[lang^="en"] .side #search {
+	background: url(%%hell-baked%%) 0px -218px no-repeat;
+	margin: -20px -26px;
+	padding-top: 54px;
+	min-height: 34px;
+}
+
+html[lang^="en"] #search input[type="text"] {
+	background: transparent;
+	width: 239px;
+	color: #F3E6D0 !important;
+	margin-left: 58px;
+	font-size: 16px;
+	padding: 2px 10px;
+}
+
+html[lang^="en"] .side #search input[type="text"] {
+	border: 0;
+}
+
+html[lang^="en"] #search input[type="text"]:focus {
+	outline: none;
+	box-shadow: 0px 0px 10px #ff0000;
+	border-left: 1px solid #ff0000;
+	border-right: 1px solid #ff0000;
+	border-radius: 3px;
+	margin-left: 57px;
+}
+
+html[lang^="en"] .side #search #searchexpando {
+	background: url(%%hell-search-expand-bg%%) bottom center no-repeat;
+	margin-top: 10px;
+	padding: 10px 30px;
+	padding-bottom: 30px;
+	border: 0;
+}
+
+html[lang^="en"] .side .titlebox .redditname {
+	display: none;
+}
+
+html[lang^="en"] .side .fancy-toggle-button {
+	padding: 10px;
+	margin: 0px;
+	margin-top: 10px;
+}
+
+html[lang^="en"] .side .fancy-toggle-button a, html[lang^="en"] #REScommentSubToggle {
+	border: 1px solid #870c03 !important;
+	padding: 5px;
+	color: #F3E6D0 !important;
+	font-size: 12px;
+	background-image: -webkit-linear-gradient(top, #180805, #391c00); 
+	background-image: -moz-linear-gradient(top, #180805, #391c00);
+	background-image: -ms-linear-gradient(top, #180805, #391c00);
+	background-image: -o-linear-gradient(top, #180805, #391c00);
+}
+
+html[lang^="en"] .side .fancy-toggle-button a.add {
+	box-shadow: 0px 0px 5px #00ff00;
+	border: 1px solid #00ff00;
+	color: #000;
+	background: #72aa00; /* Old browsers */
+	background: -moz-linear-gradient(top,  #72aa00 44%, #9ecb2d 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top,  #72aa00 44%,#9ecb2d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #72aa00 44%,#9ecb2d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #72aa00 44%,#9ecb2d 100%); /* IE10+ */
+	background: linear-gradient(top,  #72aa00 44%,#9ecb2d 100%); /* W3C */
+
+}
+
+html[lang^="en"] .RESshortcutside, html[lang^="en"] .RESDashboardToggle {
+	position: absolute;
+	z-index: 200;
+}
+
+html[lang^="en"] .RESDashboardToggle {
+	right: 25px;
+	top: 263px;
+}
+
+html[lang^="en"] .RESshortcutside {
+	right: 115px;
+	top: 263px;
+}
+
+html[lang^="en"] #RESMainGearOverlay {
+	left: 0 !important;
+}
+
+html[lang^="en"] #RESPrefsDropdown {
+	top: 141px !important;
+	right: 39px !important;
+	
+}
+
+html[lang^="en"] .styleToggle {
+	margin-top: 19px;
+}
+
+html[lang^="en"] #subButtons {
+	display: inline;
+}
+
+html[lang^="en"] .side .titlebox .word {
+	display: none;
+}
+
+html[lang^="en"] .side .titlebox .number:after {
+	content: " heroes of Sanctuary";
+}
+
+html[lang^="en"] .titlebox form.toggle, html[lang^="en"] .leavemoderator, html[lang^="en"] .side .tagline, html[lang^="en"] .side ul.content {
+	border-radius: 3px;
+	background: #111;
+	padding: 10px;
+	border: 1px solid #222;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+.side a[href="/bnetOnline"], .side a[href="/bnetOffline"], .side a[href="/bnetIcon"] {
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	background: url(%%hell-baked%%);
+	vertical-align: middle;
+	text-indent: -9999px;
+	border-radius: 3px;
+	border: 1px solid #483A30;
+}
+
+.side a[href="/bnetOnline"] {
+	background-position: -269px -105px;
+}
+
+.side a[href="/bnetOffline"] {
+	background-position: -243px -105px;
+}
+
+.side a[href="/bnetIcon"] {
+	background-position: -296px -105px;
+}
+
+.side a[href="/smallText"] {
+	font-size: 10px;
+	color: #666;
+}
+
+html[lang^="en"] .side a[href="/s"] { display: none; }
+
+/*herrderr*/
+
+html[lang^="en"] .side .usertext-body {
+	background: url(%%hell-sidebar-body%%) bottom center no-repeat;
+	margin-top: 30px;
+	padding-top: 56px;
+}
+
+html[lang^="en"] .side .usertext-body .md hr {
+	background: #000;
+	display: block;
+	width: 100%;
+	height: 1px;
+	border: none;
+	border-bottom: 1px solid #3d170b;
+}
+
+html[lang^="en"] .side .usertext-body .md:before {
+	content: url(%%hell-sidebar-headercut%%);
+	margin-left: -30px;
+	margin-top: -90px;
+	position:absolute;
+}
+
+html[lang^="en"] .side .usertext-body .md {
+	padding: 0 30px;
+	padding-bottom: 30px;
+}
+
+/*herrderr*/
+
+html[lang^="en"] .side blockquote {
+	display:block;
+	padding: 0;
+	width: 327px;
+	border: none;
+	margin: 0px auto;
+}
+
+html[lang^="en"] .side blockquote p {
+	display: block;
+	background: url(%%hell-sidebar-header%%) top center no-repeat;
+	height: 68px;
+	padding: 0 40px;
+	padding-top: 42px;
+	color: #d09940;
+	font-weight: bold;
+	display: block;
+	margin: 0px;
+}
+
+html[lang^="en"] .side blockquote blockquote {display: none;}
+
+html[lang^="en"] .side blockquote blockquote li {margin: 0 30px;}
+
+html[lang^="en"] .side blockquote blockquote h2 {
+	margin: 0 30px;
+	font-size: 16px;
+	border-bottom: 1px solid #F3E6D0;
+	color: #eee;
+}
+
+html[lang^="en"] .side blockquote blockquote p {
+	padding: 10px 0px;
+	margin: 0px;
+	margin: 0 30px;
+	font-weight: normal;
+	display: block;
+	color: #fff;
+	background: transparent;
+	height: auto;
+}
+
+html[lang^="en"] .side blockquote:hover > blockquote {
+	display: block;
+	margin: 0px;
+	margin-top: -20px;
+	padding-bottom: 30px;
+	background: url(%%hell-sidebar-body%%) bottom center no-repeat;
+}
+
+html[lang^="en"] .side blockquote > blockquote:hover {display: block;}
+
+html[lang^="en"] .titlebox form {position: static;}
+
+html[lang^="en"] .side .md h5:before {
+	content: "Announcement - ";
+}
+
+html[lang^="en"] .side .md h4:before {
+	content: url(%%cain-32%%);
+	position: absolute;
+	margin-top:-9px;
+	margin-left: -65px;
+}
+
+html[lang^="en"] .side .md h5 {
+	position: absolute;
+	top: 57px;
+	left: 617px;
+	z-index: 200;
+	border-radius: 3px;
+	border: 1px solid #f5bf78;
+	background: #181818;
+	padding: 10px;
+	box-shadow: 0px 0px 10px #f5bf78;
+	font-size: 10px;
+}
+
+html[lang^="en"] .side .md h4 {
+	position: absolute;
+	z-index: 200;
+	background: #101010;
+	padding-top: 10px;
+	padding-left: 163px;
+	font-size: 10px;
+	top: 166px !important;
+	left: 0px;
+	right: 0px;
+	height: 32px;
+	margin-left: 5px;
+	margin-right: 389px;
+	box-shadow: 0px 0px 10px #000;
+	text-shadow: 0 0 10px #3366ff, 0 0 10px #3366ff;
+}
+html[lang^="en"] .side .md h4 a {
+	color: #999;
+}
+
+html[lang^="en"] .flair {
+	border: 1px solid #222;
+}
+
+html[lang^="en"] body > .content {
+	margin-right: 389px;
+	z-index: 400;
+	position: relative;
+	margin-top: 44px;
+	background: #181818;
+	box-shadow: 0px 0px 10px #000;
+}
+
+html[lang^="en"] #siteTable .thing .entry {
+	padding: 7px;
+}
+
+html[lang^="en"] #siteTable .thing .entry .domain a:before {
+	content: "/ ";
+}
+
+html[lang^="en"] #siteTable .thing .entry .domain {
+	color: #181818;
+}
+
+html[lang^="en"] #siteTable .thing .entry .domain a {
+	color: #A99877;
+}
+
+html[lang^="en"] #siteTable .thing .entry .tagline, html[lang^="en"] #siteTable .thing .entry .buttons a {
+	color: #7B6D55;
+	font-weight: normal;
+}
+
+html[lang^="en"] #siteTable .thing .entry .buttons a {
+	font-style: italic;
+}
+
+html[lang^="en"] #siteTable .thing {
+	border-bottom: 5px solid #101010;
+	margin-bottom: 0px;
+	position: relative;
+	height: 100%;
+}
+
+html[lang^="en"] .thing a.title {
+	color: #D95200 !important;
+}
+
+html[lang^="en"] .thing a.title:visited {
+	color: #7B6D55 !important;
+}
+
+html[lang^="en"] .thing a.title:hover {
+	text-decoration: underline;
+}
+
+html[lang^="en"] .thing p.title {
+	border-bottom: 1px dashed #2f2d28;
+	padding-bottom: 5px;
+}
+
+html[lang^="en"] .thing a.thumbnail {
+	margin-top: 1px;
+	height: 71px;
+	position: relative;
+	background-color: #181818;
+}
+
+html[lang^="en"] .thing a.thumbnail:after {
+	content: url(%%hell-thumbnail-overlay-square%%);
+	z-index: 2;
+	position: absolute;
+	left: 0px;
+}
+
+html[lang^="en"] .thing a.thumbnail.self, html[lang^="en"] .thing a.thumbnail.default {
+	background: url(%%hell-baked%%) -459px -162px;
+}
+
+html[lang^="en"] .thing a.thumbnail.nsfw {
+	background: url(%%hell-baked%%) -459px -87px;
+}
+
+html[lang^="en"] .thing a.thumbnail * {
+	margin: 9px 0px;
+	background-color: #000;
+}
+
+html[lang^="en"] .thing a.thumbnail img[width="48"][height="48"] {
+	padding: 11px;
+	margin: 0;
+}
+
+html[lang^="en"] .thing .midcol {
+	margin-top: 11px;
+}
+
+html[lang^="en"] .comments-page .thing.link .midcol {
+	margin-left: 34px;
+}
+
+html[lang^="en"] .arrow, html[lang^="en"] .arrow.downmod, html[lang^="en"] .arrow.upmod, html[lang^="en"] .arrow.down, html[lang^="en"] .arrow.up {
+	background: url(%%hell-baked%%) -381px -139px;	
+	width: 16px;
+	height:13px;
+}
+
+html[lang^="en"] .arrow.downmod {
+	background-position: -397px -139px;
+}
+
+html[lang^="en"] .arrow.down {
+	background-position: -429px -139px;
+}
+
+html[lang^="en"] .arrow.up {
+	background-position: -413px -139px;
+}
+
+html[lang^="en"] .link .rank {
+	margin-left: 5px;
+	color: #333;
+	margin-top: 25px;
+}
+
+html[lang^="en"] .link .usertext .md {
+	border: 0;
+	border-left: 5px solid #111;
+	border-radius: 0px;
+	background-color: #222;
+}
+
+html[lang^="en"] .keyHighlight {
+	outline: none !important;
+	background: url(%%hell-thing-bg3%%) top left no-repeat !important;
+}
+
+html[lang^="en"] .link.last-clicked {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	background: transparent; /*url(%%hell-thing-last-clicked%%) 138px 0px no-repeat !important;*/
+}
+
+html[lang^="en"] .link.last-clicked .keyHighlight {
+	background: transparent !important;
+}
+
+html[lang^="en"] .expando-button {
+	background: url(%%hell-baked%%) transparent !important;
+	width: 33px !important;
+	height: 29px !important;
+	max-width: 33px !important;
+	max-height: 29px !important;
+}
+
+html[lang^="en"] .expando-button.selftext.collapsed {background-position: -459px -58px !important;}
+html[lang^="en"] .expando-button.selftext.expanded {background-position: -492px -58px !important;}
+
+html[lang^="en"] .expando-button.image.collapsed {background-position: -459px 0px  !important;}
+html[lang^="en"] .expando-button.image.expanded {background-position: -492px 0px !important;}
+
+html[lang^="en"] .expando-button.video.collapsed {background-position: -459px -29px !important;}
+html[lang^="en"] .expando-button.video.expanded {background-position: -492px -29px !important;}
+
+html[lang^="en"] a[href="/spoiler"]:before {
+	content: " ";
+	background: url(%%hell-baked%%) -139px -106px #000 no-repeat;
+	display: inline-block;
+	width: 93px;
+	height: 28px;
+	margin-left: -5px;
+	margin-right: 5px;
+	vertical-align:bottom;
+}
+
+html[lang^="en"] a[href="/spoiler"], html[lang^="en"] .comment .md p > a[href="/spoiler"] {
+	display: inline-block;
+	overflow: hidden;
+	background: #000;
+	color: #000 !important;
+	border-radius: 5px;
+	padding: 0 5px;
+	min-height: 28px;
+	cursor: default;
+}
+
+html[lang^="en"] a[href="/spoiler"]:hover, html[lang^="en"] .comment .md p > a[href="/spoiler"]:hover {
+	color: #E3C4A8 !important;
+}
+
+html[lang^="en"] .side iframe {
+	display: none;
+}
+
+html[lang^="en"] span.keyNavAnnotation {
+	display: none !important
+}
+
+html[lang^="en"] .morelink, html[lang^="en"] .morelink:hover {
+	background:transparent;
+	border: none;
+	height: 50px;
+}
+
+html[lang^="en"] .morelink a {
+	background: url(%%hell-baked%%) 0px 0px;
+	height: 50px;
+	width: 327px;
+	border: none;
+	display: inline-block;
+	line-height: 50px;
+	display: block;
+	color: #D96500;
+	font-weight: normal;
+}
+
+html[lang^="en"] .morelink a:hover {
+	background-position: 0px -50px;
+	text-shadow: 0px 0px 20px #ff0000;
+	color: #F3E6D0;
+}
+
+html[lang^="en"] .sidebox .spacer {
+	background: url(%%hell-search-expand-bg%%) bottom center no-repeat;
+	padding:  10px;
+	padding-bottom: 50px;
+	margin-top: 0px;
+
+	width: 307px;
+}
+
+/*listen2*/
+/*
+html[lang^="en"] .side .spacer > .titlebox {
+	padding-top: 205px;
+}
+
+html[lang^="en"] .sidebox.submit {
+	position: absolute;
+	top: 288px;
+}*/
+
+html[lang^="en"] .sidebox.submit .spacer .subtitle {
+	display: none;
+}
+
+html[lang^="en"] .sidebox .spacer:after {
+	content: "Be sure you look over the rules before posting. Here's a quick run-down: no images as link submissions, no memes, rage comics, non-Diablo content, witchhunts, personal information, porn/shock sites, bots, hacks, or locations of bots and hacks.";
+}
+
+html[lang^="en"] .sidebox.submit .spacer a {
+	display: none;
+}
+
+html[lang^="en"] .sidebox.create {
+	display: none;
+}
+
+html[lang^="en"] .nub {
+	display: none;
+}
+
+html[lang^="en"] .titlebox .bottom {
+	opacity: 0.2;
+	margin-bottom: 30px;
+}
+
+html[lang^="en"] .titlebox .bottom:hover {
+	opacity: 1.0;
+}
+
+html[lang^="en"] .icon-menu a {
+	background: transparent;
+}
+
+html[lang^="en"] .side a[href="http://www.reddit.com/r/Diablo"] {
+	display: inline-block;
+	width: 66px;
+	height: 65px;
+	background: url(%%hell-baked%%) -393px 0px;
+	text-indent: -9999px;
+	float: right;
+}
+
+html[lang^="en"] .side a[href="http://dd.reddit.com/r/Diablo"] {
+	display: inline-block;
+	width: 66px;
+	height: 65px;
+	background: url(%%hell-baked%%) -328px 0px;
+	text-indent: -9999px;
+	float: left;
+}
+
+html[lang^="en"] .side a[href="http://www.reddit.com/r/Diablo"]:hover {
+	background-position: -393px -65px;
+}
+
+html[lang^="en"] .side a[href="http://dd.reddit.com/r/Diablo"]:hover {
+	background-position: -328px -65px;
+}
+
+html[lang^="en"] .side a[href="/#themeselector"] {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	width: 133px;
+	background: #111;
+	margin: 17px 0;
+	border: 1px solid #222;
+	box-shadow: 0px 2px 5px #000;
+}
+
+html[lang^="en"] .side:after {
+	content: url(%%hell-side-bottom%%);
+	display: block;
+	height: 200px;
+	width: 379px;
+	margin-left: -26px;
+	margin-bottom: -200px;
+}
+
+html[lang^="en"] .linkinfo
+{
+	margin-top: 47px;
+	background: #111;
+	border: 1px solid #222;
+}
+
+html[lang^="en"] .linkinfo .score .number:before {
+	content: "Sells for ";
+}
+
+html[lang^="en"] .linkinfo .score .number:after {
+	content: " gold";
+}
+
+html[lang^="en"] .linkinfo .upvotes .number:before, html[lang^="en"] .linkinfo .downvotes .number:before {
+	content: "+";
+}
+
+html[lang^="en"] .linkinfo .upvotes .number:after {
+	content: " to up-votes";
+}
+
+html[lang^="en"] .linkinfo .downvotes .number:after {
+	content: " to down-votes";
+}
+
+html[lang^="en"] .linkinfo .word {
+	display: none;
+}
+
+html[lang^="en"] input, html[lang^="en"] .linkinfo .shortlink input {
+	background: #222;
+	border: 1px solid #333;
+	color: #ddd;
+}
+
+html[lang^="en"] input:hover, html[lang^="en"] .linkinfo .shortlink input:hover {
+	border: 1px solid #A61C1C;
+}
+
+html[lang^="en"] input:focus {
+	border: 1px solid #A61C1C;
+	box-shadow: 0px 0px 10px #A61C1C;
+}
+
+html[lang^="en"] .tabmenu li a, html[lang^="en"] .tabmenu li.selected a {
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border: 1px solid #666;
+	background: #222;
+	padding: 5px;
+	font-weight: normal;
+	box-shadow: 0px 0px 10px #000;
+}
+
+html[lang^="en"] .tabmenu li.selected a {
+	border: 1px solid #F5BF78;
+	box-shadow: 0px 0px 10px #f5bf78;
+	background: #444;
+	color: #fff !important;
+}
+
+html[lang^="en"] .commentarea .menuarea {
+	color: #A99877;
+	font-size: 10px;
+}
+
+html[lang^="en"] .panestack-title {
+	margin: 10px 10px 0px 10px;
+	border-color: #292929;
+}
+
+html[lang^="en"] .commentarea {
+	padding-bottom: 20px;
+	border-bottom: 5px solid #111;
+}
+
+html[lang^="en"] .commentarea .menuarea {
+	border-bottom: 5px solid #111;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-left: 10px;
+	padding-bottom: 7px;
+}
+
+html[lang^="en"] textarea {
+	background-color: #ccc;
+	border: 1px solid #000;
+}
+
+html[lang^="en"] textarea:hover {
+	border: 1px solid #A61C1C;
+}
+
+html[lang^="en"] textarea:focus {
+	outline: none;
+	border: 1px solid #A61C1C;
+	box-shadow: 0px 0px 10px #A61C1C;
+}
+
+html[lang^="en"] .thing.comment {
+	background: #222 !important;
+	border-color: #333 !important;
+	position: relative;
+	padding: 5px;
+	padding-top: 0px !important;
+	margin: 5px;
+	outline: none;
+}
+
+/* listen2: alternating colors for nested comments. Comments never go deeper than 10 levels. */
+/*html[lang^="en"] .thing.comment:nth-child(4n+1) p.parent { background-color: #101010 !important }
+html[lang^="en"] .thing.comment:nth-child(4n+3) p.parent { background-color: #222 !important }*/
+html[lang^="en"] .comment .comment { background-color: #181818 !important }
+html[lang^="en"] .comment .comment .comment { background-color: #222 !important }
+html[lang^="en"] .comment .comment .comment .comment { background-color: #181818 !important }
+html[lang^="en"] .comment .comment .comment .comment .comment { background-color: #222 !important }
+html[lang^="en"] .comment .comment .comment .comment .comment .comment { background-color: #181818 !important }
+html[lang^="en"] .comment .comment .comment .comment .comment .comment .comment { background-color: #222 !important }
+html[lang^="en"] .comment .comment .comment .comment .comment .comment .comment .comment { background-color: #181818 !important }
+html[lang^="en"] .comment .comment .comment .comment .comment .comment .comment .comment .comment { background-color: #222 !important }
+html[lang^="en"] .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment { background-color: #181818 !important }
+
+
+html[lang^="en"] .thing.comment * {
+	z-index: 1;
+}
+
+html[lang^="en"] .comment .md p > a:visited {
+	color: #BF8EDE;
+}
+
+html[lang^="en"] .thing.comment .entry {
+	padding-top: 5px;
+}
+
+html[lang^="en"] .thing.comment p.parent {
+	position: absolute;
+	top: -1px;
+	left: 10px;
+	width: 100%;
+	height: 100%;
+	/*background: #222; /* listen2: removed as part of alternating comment colors */
+	z-index: -1;
+	margin-left: -11px;
+	border-radius: 3px;
+	border: 1px solid #444;
+}
+
+html[lang^="en"] .comment .child {
+	border-left: none;
+}
+
+html[lang^="en"] .content ~ .parentComment {
+	z-index: 999;
+	background: #222 !important;
+	border-color: #333 !important;
+	min-width: 300px;
+}
+
+html[lang^="en"] .tagline .submitter {
+	background: #006891;
+	color: #fff;
+	border-radius: 2px;
+	padding: 3px;
+}
+
+html[lang^="en"] .tagline .friend {
+	background: #912200;
+	border-radius: 2px;
+	color: #fff;
+	padding: 3px;
+}
+
+html[lang^="en"] .tagline .moderator {
+	background: #282;
+	border-radius: 2px;
+	color: #fff;
+	padding: 3px;
+}
+
+html[lang^="en"] .md td, html[lang^="en"] .md th {
+	border:none;
+	padding: 13px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+html[lang^="en"] .md tr th:last-child { border:none; }
+
+html[lang^="en"] .RESUserTagImage {
+	opacity: 0.5;
+}
+
+html[lang^="en"] .RESUserTagImage:hover {
+	opacity: 1.0;
+}
+
+html[lang^="en"] .footer-parent {
+	background: url(%%hell-footer%%) top center no-repeat;
+	padding-top: 400px;
+}
+
+html[lang^="en"] .linefield, html[lang^="en"] .roundfield, html[lang^="en"] .infobar, html[lang^="en"] .raisedbox {/**/
+	background-color: #222;
+	border-radius: 3px;/**/
+	border-color: #444;
+}
+
+html[lang^="en"] .linefield .title {
+	color: #F3E6D0;
+}
+
+html[lang^="en"] #link-desc, html[lang^="en"] .info-bar, html[lang^="en"] #text-desc {
+	border-color: #600;
+	box-shadow: 0px 0px 20px #600;
+	background-color: #000;
+	border-radius: 3px;
+}
+
+html[lang^="en"] .submit-page #title-field {
+	position: relative;
+}
+
+html[lang^="en"] .submit-page #link-desc:after, #text-desc:after {
+	content: "Please check the rules first. Here's a quick run-down: NO images as link submissions, NO memes, rage comics, non-Diablo content, witchhunts, personal information, porn/shock sites, bots, hacks, or locations of bots and hacks. We also remove DAE posts or other zero-merit posts. Posts may be deleted without notice. Tag crafting posts by including [Crafting] in the title.";
+	font-weight: bold;
+	font-size: 14px;
+	color: #c00;
+	display:block;
+	margin-top: 10px;
+}
+
+html[lang^="en"] .submit-page #title-field:hover:after { 
+	position: absolute;
+	display: block;
+	content: "Please read the red text above very carefully before submitting. Thank you!";
+	font-size: 10px;
+	width: 600px;
+	left: 550px;
+	top: 35px;
+	font-weight: bold;
+	background: #000;
+	border-radius: 3px;
+	padding: 5px;
+	border: 1px solid #600;
+	box-shadow: 0px 0px 20px #600;
+}
+
+html[lang^="en"] .tabmenu.formtab .selected a {
+	background: #222;
+}
+
+html[lang^="en"] .formtabs-content {
+	border-color: #333;
+}
+
+html[lang^="en"] .submit-page form.submit.content {
+	padding-left: 74px;
+	padding-bottom: 20px;
+}
+
+html[lang^="en"] .submit-page .content h1 {
+	padding-left: 74px;
+}
+
+html[lang^="en"] .submit-page .redditname.pagename {
+	margin-left: -999px;
+}
+
+html[lang^="en"] .RESDialogSmall {
+	z-index: 999;
+}
+
+html[lang^="en"] .flairselector.drop-choices.active {
+	z-index: 900;
+	box-shadow: 0px 0px 10px #A61C1C;
+	background: #222;
+	border: 1px solid #c00;
+}
+
+html[lang^="en"] ::selection {
+	background: #821D1D;
+}
+
+html[lang^="en"] ::-moz-selection {
+	background: #821D1D;
+}
+
+html[lang^="en"] .error {color: #CF4242; }
+
+html[lang^="en"] .usertext.border .usertext-body, html[lang^="en"] .new-comment .usertext-body {
+	background-color: #422F15;
+	border: 1px solid #333;
+}
+
+html[lang^="en"] #mail {
+	background: url(%%hell-mail%%);
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	display: inline-block;
+}
+
+html[lang^="en"] #mail.nohavemail {background-position: 0px -16px;}
+html[lang^="en"] #mail.havemail {background-position: 0px 0px;}
+
+html[lang^="en"] .flairselector li { border: none;}
+html[lang^="en"] .flairselector .customizer:before { content: "Battletag"; font-weight: bold; display: inline-block; margin-top: 10px;}
+html[lang^="en"] .flairselector h2 {background: #000;}
+
+html[lang^="en"] .titlebox form.flairtoggle { border-bottom: none; margin-bottom: 0; }
+html[lang^="en"] .titlebox form.flairtoggle + .tagline { border-top: none; text-align: center; }
+
+html[lang^="en"] #sr-header-area {
+	background-color: #111;
+	border-color: #222;
+	border-bottom: 2px solid #222;
+	border-top: 0;
+	padding: 3px 0px;
+}
+
+html[lang^="en"] .side a.login-required[href$="/r/Diablo/submit"] { text-indent: 100%; white-space:nowrap; overflow:hidden;}
+html[lang^="en"] .side a.login-required[href$="/r/Diablo/submit"]:after { content: "Submit a post"; margin-left: -421px;}
+
+/****************************************************************************************************************
+			END HELL THEME
+****************************************************************************************************************/
+/****************************************************************************************************************
+			HEAVEN THEME
+****************************************************************************************************************/
+html[lang="dd"] body
+{
+	background-image: url(%%heaven-white-noise-texture%%);
+}
+
+html[lang="dd"] #header
+{
+	border: none;
+}
+
+html[lang="dd"] #header-img
+{
+	position: absolute;
+	left: 80px;
+	top: 11px;
+}
+
+html[lang="dd"] #sr-header-area
+{
+	z-index: 99;
+}
+
+html[lang="dd"] #header-bottom-left
+{
+	position: relative;
+	background-image: url(%%heaven-header-bg-texture%%);
+	background-position: left bottom;
+	background-color: transparent;
+	height: 110px;
+	margin-bottom: 75px;
+}
+
+html[lang="dd"] #header-bottom-left .redditname
+{
+	display: inline-block;
+	margin-left: 220px;
+	text-align: center;
+	background-image: url(%%heaven-header-logo-bg%%);
+	background-position: left bottom;
+	width: 578px;
+	height: 110px;
+}
+
+html[lang="dd"] #header-bottom-left .redditname a
+{
+	display: inline-block;
+	font-size: 0;
+	width: 231px;
+	height: 219px;
+	margin-top: -10px;
+	margin-left: 8px;
+	background-image: url(%%heaven-diablo-logo%%);
+	z-index: 0;
+}
+
+html[lang="dd"] #header-bottom-left .redditname a:hover
+{
+	background-position: 0px -219px;
+}
+
+html[lang="dd"] #header-bottom-left .tabmenu
+{
+	position: absolute;
+	top: 150px;
+	left: 80px;
+}
+
+html[lang="dd"] #header-bottom-right
+{
+	height: 86px;
+	border-left: 1px solid #cdbd98;
+	border-right: 1px solid #cdbd98;
+	box-shadow: 0px -00px 10px #fff;
+	border-radius: 0px;
+	background: transparent !important;
+	padding: 10px;
+	width: 300px;
+	margin-right: 80px;
+}
+
+html[lang="dd"] #userbarToggle
+{
+	display: none !important;
+}
+
+html[lang="dd"] #header-bottom-right span.user
+{
+	font-size: 14px;
+	margin: 0;
+}
+
+html[lang="dd"] #header-bottom-right .user + span.separator, html[lang="dd"] #header-bottom-right #modmail + span.separator
+{
+	display: block;
+	font-size: 0px;
+}
+
+html[lang="dd"] .tabmenu
+{
+	margin: 0;
+}
+
+html[lang="dd"] .tabmenu li a
+{
+	border-radius: 4px;
+	background-color: #fff;
+	box-shadow: 0px 1px 2px #bdae91;
+	border: 1px solid #fff;
+	padding: 5px;
+	font-weight: normal;
+}
+
+html[lang="dd"] .tabmenu li a:hover
+{
+	border: 1px solid #c4b99d;
+}
+
+html[lang="dd"] .tabmenu li.selected a
+{
+	background-color: #f5f2ed;
+	border: 2px solid #c4b99d;
+	color: #ff6600;
+}
+
+html[lang="dd"] body > div.content
+{
+	margin-left: 80px;
+	margin-right: 410px;
+	margin-top: 115px;
+	z-index: 99;
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 0px 2px 0px #baa982;
+	border: 1px solid #e8e3d4;
+	position: relative;
+	padding: 10px;
+}
+
+html[lang="dd"] body > div.side
+{
+	float: right;
+	margin-right: 80px;
+	background: url(%%heaven-sidebar-bg%%) bottom center repeat-x #eee7da;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #baa982;
+	padding-bottom: 100px;
+	box-shadow: 0px 2px 0px #baa982;
+width: 300px;
+}
+
+html[lang="dd"] body > div.side div.spacer:first-child
+{
+	background: url(%%heaven-header-bg-texture%%) bottom center no-repeat;
+	padding: 10px;
+	padding-bottom: 15px;
+	margin: -10px;
+}
+
+html[lang="dd"] body > div.side h1.redditname
+{
+	display: none;
+}
+
+html[lang="dd"] body > div.side div.titlebox span.number:after
+{
+	content: " heroes of Sanctuary";
+}
+
+html[lang="dd"] body > div.side div.titlebox span.word
+{
+	display: none;
+}
+
+html[lang="dd"] body > div.side form.toggle
+{
+	background-color: transparent;
+	border-radius: 4px;
+	border: 1px solid #cdbd98;
+	box-shadow: 0px 2px 0px #cdbd98;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+html[lang="dd"] body > div.side div.usertext-body, html[lang="dd"] body > div.side .sidebox .spacer, html[lang="dd"] body > div.side ul.content, html[lang="dd"] .link .usertext .md, html[lang="dd"] .roundfield
+{
+	background: #eeeeee;
+	border: 1px solid #cdbd98;
+	box-shadow: 0px 2px 0px #cdbd98;
+	border-radius: 4px;
+	padding: 9px;
+}
+
+html[lang="dd"] body > div.side ul.content
+{
+	margin-top: 10px;
+}
+
+html[lang="dd"] body > div.side .morelink, html[lang="dd"] body > div.side h1
+{
+	background: url(%%heaven-header-bg-texture%%) bottom left;
+	height: 45px;
+	line-height: 43px;
+	border: none;
+	border-top: 1px solid #cdbd98;
+	margin: 0 -10px;
+	text-align: center;
+	display: block;
+}
+
+html[lang="dd"] body > div.side h1, html[lang="dd"] body > div.side .helplink
+{
+	font-size: 12px;
+	font-weight: normal;
+	color: #333;
+	text-shadow: 0px 1px 1px #fff;
+}
+
+html[lang="dd"] body > div.side .helplink
+{
+	margin-top: 25px;
+	color: #2387c1;
+}
+
+html[lang="dd"] body > div.side .morelink:hover
+{
+	background:  url(%%heaven-header-bg-texture-dark%%) bottom left;
+}
+
+html[lang="dd"] body > div.side .morelink a
+{
+	font-size: 18px;
+	font-weight: normal;
+	color: #2387c1;
+	text-shadow: 0px 1px 1px #fff;
+}
+
+html[lang="dd"] body > div.side .morelink .nub
+{
+	display: none;
+}
+
+html[lang="dd"] body > div.side .sidebox .spacer a
+{
+	display: none;
+}
+
+html[lang="dd"] body > div.side .submit .spacer .subtitle
+{
+}
+
+html[lang="dd"] body > div.side .submit .spacer .subtitle:before
+{
+	content: "Please read the rules before submitting! Ragecomics, memes, and any image that does not contain anything Diablo related is subject to deletion.";
+	display: block;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #baa982;
+	margin-bottom: 10px;
+}
+
+html[lang="dd"] .icon-menu a 
+{
+	background: transparent;
+}
+
+html[lang="dd"] .gadget .midcol
+{
+	width: 17px;
+}
+
+html[lang="dd"] .midcol
+{
+	width: 17px;
+}
+
+html[lang="dd"] #search input[type="text"]
+{
+	border-radius: 4px;
+	box-shadow: 0px -1px 0px #baa982;
+	border: 1px solid #ddd;
+}
+
+html[lang="dd"] .arrow, html[lang="dd"] .arrow.downmod, html[lang="dd"] .arrow.upmod, html[lang="dd"] .arrow.down, html[lang="dd"] .arrow.up
+{
+	background: url(%%heaven-vote-icons%%);	
+	width: 17px;
+	height: 14px;
+}
+
+html[lang="dd"] .arrow.downmod
+{
+	background-position: -51px 0px;
+}
+
+html[lang="dd"] .arrow.upmod
+{
+	background-position: -34px 0px;
+}
+
+html[lang="dd"] .arrow.down
+{
+	background-position: -17px 0px;
+}
+
+html[lang="dd"] .arrow.up
+{
+	background-position: 0px 0px;
+}
+
+html[lang="dd"] .midcol .score.dislikes
+{
+	color: #1176ff;
+}
+
+html[lang="dd"] .midcol .score.likes
+{
+	color: #ff6b11;
+}
+
+html[lang="dd"] #siteTable .thing
+{
+	margin-bottom: 10px;
+	border-bottom: 1px solid #e8e3d4;
+	padding-bottom: 7px;
+}
+
+html[lang="dd"] #siteTable .thing a.thumbnail
+{
+	width: 70px;
+	height: 52px;
+	max-height: 52px;
+	position: relative;
+}
+
+html[lang="dd"] #siteTable .thing a.thumbnail img
+{
+	width: 70px;
+	height: 52px;
+}
+
+html[lang="dd"] #siteTable .thing a.thumbnail:after
+{
+	content: url(%%heaven-thumbnail-overlay%%);
+	z-index: 2;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+html[lang="dd"] #siteTable .thing a.thumbnail.self:after
+{
+	margin-left: 0px;
+}
+
+html[lang="dd"] #siteTable .thing a.title
+{
+	color: #0855f2;
+}
+
+html[lang="dd"] #siteTable .thing a.title:visited
+{
+	color: #9665e7;
+}
+
+html[lang="dd"] #siteTable .thing span.domain
+{
+	float: right;
+	color: #fff;
+}
+
+html[lang="dd"] #siteTable .thing span.domain a
+{
+	color: #bbb;
+}
+
+html[lang="dd"] #siteTable .thing div.entry.keyHighlight
+{
+	outline: none;
+	background-color: #fff;
+	border-right: 3px solid #0855f2;
+}
+
+html[lang="dd"] .footer-parent
+{
+	background:url(%%heaven-diablo-footer%%) center bottom no-repeat;
+	height: 250px;
+	padding-top: 60px;
+}
+
+html[lang="dd"] .comment
+{
+	border-radius: 4px;
+	margin-left: 10px;
+	margin-right: 8px;
+	margin-top: 0px;
+	margin-bottom: 8px;
+	border: 1px solid #e6e6e6;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-right: 8px;
+	padding-bottom: 0px;
+	overflow: hidden;
+	box-shadow: 0px 2px 0px #bbbbbb;
+}
+
+/*****************************
+	Announcements
+*****************************/
+html[lang="dd"] .titlebox .usertext-body .md h5, html[lang="dd"] .titlebox .usertext-body .md h4
+{
+	border-radius: 3px;
+	position: absolute;
+	background-color: #eee;
+	border: 1px solid #fff;
+	display: block;
+	line-height: 20px;
+	padding: 4px;
+	font-size: 100%;
+	font-weight: normal;
+	z-index: 101;
+	box-shadow: 0px 0px 10px #22aaee;
+}
+
+html[lang="dd"] .titlebox .usertext-body .md h5
+{
+	top: 85px !important;
+	left: 800px;
+}
+
+html[lang="dd"] .titlebox .usertext-body .md h4
+{
+	top: 204px !important;
+	left: 0px;
+	right: 0px;
+	margin-left: 140px;
+	margin-right: 410px;
+	box-shadow: 0px 0px 5px #D65601;
+	background-color: #fff;
+	font-size: 90%;
+}
+
+html[lang="dd"] .titlebox form 
+{
+	position: static;
+}
+
+html[lang="dd"] .titlebox .usertext-body .md h5 a:before
+{
+	content: "Announcement";
+	color: #22aaee;
+	border-right: 1px solid #fff;
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
+/*html[lang="dd"] .titlebox .usertext-body .md h4 a:before 
+{
+	content:"Stay Awhile and Listen";
+	color: #D65601;
+	font-weight: bold;
+	border-right: 1px solid #eee;
+	padding-right: 10px;
+	margin-right: 10px;
+}*/
+
+html[lang="dd"] .titlebox .usertext-body .md h4:before
+{
+	content: url(%%cain-right-heaven%%);
+	position: absolute;
+	/*border-style: solid;*/
+	left: -56px;
+	height: 0px;
+	top: -1px;
+	/*border-width: 14px 20px 14px 0px;*/
+/*	border-color: transparent #111;*/
+}
+
+
+html[lang="dd"] body > .side blockquote
+{
+display:block;
+padding: 0;
+width: 300px;
+border: none;
+margin: 0px;
+margin-left: -9px;
+}
+
+html[lang="dd"] body > .side blockquote p
+{
+display: block;
+background: url(%%heaven-sidebar-header%%) top center no-repeat;
+height: 68px;
+padding: 0 40px;
+padding-top: 42px;
+font-weight: bold;
+display: block;
+margin: 0px;
+}
+
+html[lang="dd"] body > .side blockquote blockquote
+{
+display: none;
+}
+
+html[lang="dd"] body > .side blockquote blockquote h2
+{
+margin: 0 30px;
+font-size: 16px;
+border-bottom: 1px solid #ddd;
+}
+
+html[lang="dd"] body > .side blockquote blockquote p
+{
+padding: 10px 0px;
+margin: 0px;
+margin: 0 30px;
+font-weight: normal;
+display: block;
+background: transparent;
+height: auto;
+}
+
+html[lang="dd"] body > .side blockquote:hover > blockquote
+{
+display: block;
+margin: 0px;
+margin-top: -20px;
+padding-bottom: 30px;
+background: url(%%heaven-sidebar-body%%) bottom center no-repeat;
+}
+
+html[lang="dd"] body > .side blockquote > blockquote:hover
+{
+display: block;
+}
+
+html[lang="dd"] .side blockquote blockquote ul {padding-left: 23px;}
+
+html[lang="dd"] .side a[href="/#themeselector"] { display: none; }
+
+/****************************************************************************************************************
+			END HEAVEN THEME
+****************************************************************************************************************/
