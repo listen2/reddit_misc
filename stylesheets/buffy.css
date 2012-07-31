@@ -30,7 +30,7 @@
 	content: "message the gang";
 }
 .helplink + div h1 {	/* hide "moderators" */
-	font-size: 0;
+	font-size: 0 !important;
 	content: "";
 }
 .helplink + div h1::before {
