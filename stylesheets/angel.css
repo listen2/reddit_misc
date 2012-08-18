@@ -13,11 +13,18 @@
 
 /* Hide some text elements so we can replace them with our own text */
 
-.titlebox .word {		/* hide the default "readers" */
+.subscribers .word {		/* hide the default "readers" */
 	display: none;
 }
-.titlebox .number::after {		/* insert our own text before the number */
-	content: " open cases";
+.subscribers .number::after {		/* insert our own text after the number */
+	content: " cases on file";
+}
+
+.users-online .word {		/* hide the default "users online" */
+	display: none;
+}
+.users-online .number::after {		/* insert our own text after the number */
+	content: " cases currently open";
 }
 
 .helplink {		/* hide "message the mods" */
@@ -499,6 +506,10 @@ input[name="uh"] ~ a::after, .user::before {
 	width: 505px
 }
 /* From here to EOF is generated code for the quotes */
+input[name="uh"][value^="81"] ~ a::after { content: "Lorne told you to pee all over the office?" }
+input[name="uh"][value^="71"] ~ a::after { content: "I'll tell you, you're headed into trouble with a capital TROUB." }
+input[name="uh"][value^="61"] ~ a::after { content: "It is possible to brood and show a little interest in the feelings of others." }
+input[name="uh"][value^="51"] ~ a::after { content: "He likes playing the hero. Walking off into the dark, his long coat flowing behind him in that mysterious and attractive way..." }
 input[name="uh"][value^="41"] ~ a::after { content: "You think you did me a favor? You damned me!" }
 input[name="uh"][value^="31"] ~ a::after { content: "I could pick the wisest and bravest knight in all the land and make him mine forever with a kiss." }
 input[name="uh"][value^="21"] ~ a::after { content: "I'm not gonna get a bat-nose like that, huh? Am I?" }

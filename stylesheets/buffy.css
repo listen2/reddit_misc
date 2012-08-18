@@ -13,11 +13,18 @@
 
 /* Hide some text elements so we can replace them with our own text */
 
-.titlebox .word {		/* hide the default "readers" */
+.subscribers .word {		/* hide the default "readers" */
 	display: none;
 }
-.titlebox .number::before {		/* insert our own text before the number */
+.subscribers .number::before {		/* insert our own text before the number */
 	content: "Welcome to Sunnydale. Population: ";
+}
+
+.users-online .word {		/* hide the default "users online" */
+	display: none;
+}
+.users-online .number::after {		/* insert our own text after the number */
+	content: " currently patrolling";
 }
 
 .helplink {		/* hide "message the mods" */
