@@ -378,6 +378,10 @@ a[href$="/reddits/create"] {
 .listing-page .linkflair-spoiler .thumbnail {	/* use the red "B" thumbnail */
 	background: url(%%assets%%) -110px -320px no-repeat !important;
 }
+/* Halloween 2012 costume contest entries */
+.linkflair-costume .linkflairlabel {
+	background: #8200cd;
+}
 .listing-page .linkflair-spoiler .thumbnail img {		/* and hide real thumbnail */
 	opacity: 0;	 /* we don't use display:none because we still want it to take up space */
 }
