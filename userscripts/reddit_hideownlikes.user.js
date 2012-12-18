@@ -6,8 +6,6 @@
 // ==/UserScript==
 
 (function(){
-	username = document.getElementsByClassName("pagename")[0].innerText;
-
 	window.addEventListener("neverEndingLoad", function() {    	
 		filter();
 	}, false);
@@ -15,7 +13,7 @@
 	function filter() {
 		items = document.getElementsByClassName("author");
 		for (i = 0; i < items.length; i ++) {
-			if (items[i].innerText === username) {
+			if (items[i].innerText === reddit.logged) {
 				if (c.checked)
 					items[i].parentNode.parentNode.parentNode.style.display = "none";
 				else
