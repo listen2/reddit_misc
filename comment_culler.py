@@ -62,7 +62,7 @@ for f in range(0, 4):
 	print("http://www.reddit.com/comments/%s/_/%s" % (c["link_id"][3:], c["id"]))
 	print("by %s" % (c["author"]))
 	if len(c["body"]) > 300:
-		print("%s..." % (c["body"]))
+		print("%s..." % (c["body"][:300]))
 	else:
 		print(c["body"])
 	print("\n")
