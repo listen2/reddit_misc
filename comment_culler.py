@@ -56,7 +56,8 @@ for c in coms:
 	n += 1
 
 #now just pick one. Actually, pick four, in case the first few are off-topic or unconstructive comments
-print("drawing for %s...\n\n" % (prize))
+print("drawing for %s..." % (prize))
+print("DID YOU REMEMBER TO UPDATE THE LIST OF AVAILABLE PRIZES????\n\n\n\n\n\n")
 for f in range(0, 4):
 	c = coms[random.randint(0, 100)]["data"]
 	print("http://www.reddit.com/comments/%s/_/%s" % (c["link_id"][3:], c["id"]))
@@ -66,3 +67,4 @@ for f in range(0, 4):
 	else:
 		print(c["body"])
 	print("\n")
+print("WELL, DID YOU REMEMBER TO UPDATE THE LIST OF AVAILABLE PRIZES????")
