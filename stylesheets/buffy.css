@@ -325,26 +325,37 @@ div.content {		/* make some space above the main content */
 
 
 /* hide the old submit and create buttons */
-.sidebox.submit,
-.sidebox.create,
 .nub {
 	display: none;
 }
 /* new submit button */
-a[href$="/r/buffy/submit"],
-a[href$="/reddits/create"] {
-	display: inline-block;
+.sidebox.submit,
+.sidebox.create {
 	border: 1px solid #444;
-	background: #ddd url(%%xbow%%) no-repeat 6px 0;
+	background: #ddd url(%%xbow4%%) no-repeat 6px 0;
 	width: 298px;
 	height: 45px;
 	text-align: center;
 	line-height: 43px;
-	font-size: 20pt;
 	color: #c11;
 	font-weight: bold;
 	border-radius: 5px;
 	margin-bottom: 5px;
+}
+.morelink, .morelink:hover {
+	background: none;
+	height: 45px;
+	width: 298px;
+	border: none;
+	line-height: 45px;
+	text-align: left;
+	left: 52px;
+}
+.morelink a {
+	color: #c11;
+}
+.morelink a:hover {
+	color: #e80;
 }
 /* new create button */
 a[href$="/reddits/create"] {
