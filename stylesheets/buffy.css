@@ -332,9 +332,9 @@ div.content {		/* make some space above the main content */
 .sidebox.submit,
 .sidebox.create {
 	border: 1px solid #444;
-	background: #ddd url(%%xbow4%%) no-repeat 6px 0;
+	background: #ddd url(%%xbow4a%%) no-repeat 0px 0;
 	width: 298px;
-	height: 45px;
+	height: 40px;
 	line-height: 43px;
 	color: #c11;
 	font-weight: bold;
@@ -343,12 +343,10 @@ div.content {		/* make some space above the main content */
 }
 .morelink, .morelink:hover {
 	background: none;
-	height: 45px;
+	height: 40px;
 	width: 298px;
 	border: none;
-	line-height: 45px;
-	text-align: left;
-	left: 52px;
+	line-height: 40px;
 }
 .morelink a {
 	color: #c11;
