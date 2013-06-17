@@ -9,11 +9,14 @@ subr = "Diablo"
 
 r = praw.Reddit(user_agent="/r/diablo contest tool, comment picker")
 
+#prizes given: lanyard, tyrael, tyrael
+
 prizes = []
-prizes = prizes + ["COLLECTOR'S EDITION" for x in range(0, 3)]
-prizes = prizes + ["MINI-TYRAEL" for x in range(0, 5)]
-prizes = prizes + ["PIN" for x in range(0, 2)]
-prizes = prizes + ["LANYARD" for x in range(0, 10)]
+#prizes = prizes + ["COLLECTOR'S EDITION" for x in range(0, 3)]
+#prizes = prizes + ["MINI-TYRAEL" for x in range(0, 3)]
+#prizes = prizes + ["PIN" for x in range(0, 2)]
+#prizes = prizes + ["LANYARD" for x in range(0, 9)]
+prizes = ["tyr"]
 random.shuffle(prizes)
 prize = prizes[0]
 
@@ -59,7 +62,7 @@ for c in coms:
 print("drawing for %s..." % (prize))
 print("DID YOU REMEMBER TO UPDATE THE LIST OF AVAILABLE PRIZES????\n\n\n\n\n\n")
 for f in range(0, 4):
-	c = coms[random.randint(0, 100)]["data"]
+	c = random.choice(coms)["data"]
 	print("http://www.reddit.com/comments/%s/_/%s" % (c["link_id"][3:], c["id"]))
 	print("by %s" % (c["author"]))
 	if len(c["body"]) > 300:
