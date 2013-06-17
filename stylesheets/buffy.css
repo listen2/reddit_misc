@@ -97,10 +97,10 @@ a.author:hover,	/* hovered usernames */
 }
 .thing .title:visited,
 .thing .title.loggedin:visited {
-	color: #444;
+	color: #500;
 }
 .thing .md p > a:visited {	/* visited links in message bodies */
-	color: #444 !important;
+	color: #500 !important;
 }
 
 .buttons a {	/* the "share, source, permalink, etc." links under comments and OPs */
