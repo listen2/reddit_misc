@@ -78,7 +78,7 @@ a,		/* links in general */
 .tagline a,	/* usernames (this might be a RES class?) */
 .thing .title,	/* thing titles */
 .thing .title.loggedin {	/* thing titles for logged-in users */
-	color: #008;
+	color: #00a;
 }
 a:hover {	/* hovered links in general */
 	color: #a80;
@@ -97,10 +97,10 @@ a.author:hover,	/* hovered usernames */
 }
 .thing .title:visited,
 .thing .title.loggedin:visited {
-	color: #444;
+	color: #405;
 }
 .thing .md p > a:visited {	/* visited links in message bodies */
-	color: #444 !important;
+	color: #405 !important;
 }
 
 .buttons a {	/* the "share, source, permalink, etc." links under comments and OPs */
