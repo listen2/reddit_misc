@@ -27,9 +27,12 @@
 		for (f = 0; f < users.length; f++) {
 			u = users[f];
 			//u.style.backgroundColor = get_color(u.innerText);
-			u.style.color = get_color(u.innerText);
-			u.style.borderRadius = "3px";
-			u.style.padding = "0 2px 0 2px";
+			u.style.setProperty("color", get_color(u.innerText), "important");
+			u.style.setProperty("font-size", "14px", "important");
+			u.style.setProperty("visibility", "visible", "important");
+
+			u.style.setProperty("border-radius", "3px", "important");
+			u.style.setProperty("padding", "0 2px 0 2px", "important");
 			//u.style.color = "#000";
 		}
 	}
