@@ -30,6 +30,7 @@
 			u.style.setProperty("color", get_color(u.innerText), "important");
 			u.style.setProperty("font-size", "14px", "important");
 			u.style.setProperty("visibility", "visible", "important");
+			u.style.setProperty("display", "inline", "important");
 
 			u.style.setProperty("border-radius", "3px", "important");
 			u.style.setProperty("padding", "0 2px 0 2px", "important");
