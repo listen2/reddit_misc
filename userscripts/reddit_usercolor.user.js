@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name reddit username colorifier
-// @namespace reddit_listen2
-// @description exactly what you think
-// @include *.reddit.com/*
+// @name reddit	username colorifier
+// @namespace		reddit_listen2
+// @description	exactly what you think
+// @include			*.reddit.com/*
 // ==/UserScript==
 
 (function(){
