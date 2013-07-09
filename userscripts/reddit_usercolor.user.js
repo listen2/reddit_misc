@@ -14,8 +14,7 @@
 		var a = [0, 0, 0];
 		for (i = 0; i < name.length; i++) {
 			x = name.charCodeAt(i)-48;
-			y = x % 3;
-			a[y] = a[y]+x;
+			a[x%3] += x;
 		}
 		for (i = 0; i < a.length; i++) {
 			a[i] = Math.floor(0.8*(a[i]%256));	//TODO when browsers support JS 1.7, a = [Math.floor(0.8*(x%256)) for x in a];
