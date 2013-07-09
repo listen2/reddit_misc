@@ -20,7 +20,7 @@
 		for (i = 0; i < a.length; i++) {
 			a[i] = Math.floor(0.8*(a[i]%256));	//TODO when browsers support JS 1.7, a = [Math.floor(0.8*(x%256)) for x in a];
 		}
-		return "rgb(" + a[0] + "," + a[1] + "," + a[2] + ")";
+		return "rgb(" + a.join(",") + ")";
 	}
 
 	function colorize() {
