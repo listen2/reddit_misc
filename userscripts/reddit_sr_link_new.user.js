@@ -16,9 +16,9 @@
 		e.innerHTML = "hot";
 		e.href = elems[0].firstChild.href
 
-		d.appendChild(document.createTextNode(" ["));
+		d.appendChild(document.createTextNode(" ("));
 		d.appendChild(e);
-		d.appendChild(document.createTextNode("]"));
+		d.appendChild(document.createTextNode(")"));
 		elems[0].insertBefore(d, elems[0].firstChild.nextSibling);
 
 		elems[0].firstChild.href += "new";
@@ -32,9 +32,9 @@
 		e.innerHTML = "hot";
 		e.href = elems[i].href
 
-		d.appendChild(document.createTextNode(" ["));
+		d.appendChild(document.createTextNode(" ("));
 		d.appendChild(e);
-		d.appendChild(document.createTextNode("]"));
+		d.appendChild(document.createTextNode(")"));
 		elems[i].parentNode.insertBefore(d, elems[i].nextSibling);
 
 		elems[i].href += "new";
