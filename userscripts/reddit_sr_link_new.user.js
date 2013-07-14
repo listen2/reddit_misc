@@ -27,6 +27,7 @@
 	var elems = document.getElementsByClassName("subreddit");
 	for (i = 0; i < elems.length; i++) {
 		d = document.createElement("span");
+		d.style.setProperty("font-size", "small");
 
 		e = document.createElement("a");
 		e.innerHTML = "hot";
