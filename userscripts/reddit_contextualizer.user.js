@@ -7,7 +7,7 @@
 
 (function(){
 	window.addEventListener("neverEndingLoad", function() {    	
-		timize();
+		contextualize();
 	}, false);
 
 	function contextualize() {
