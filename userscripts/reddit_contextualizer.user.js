@@ -6,10 +6,6 @@
 // ==/UserScript==
 
 (function(){
-	window.addEventListener("neverEndingLoad", function() {    	
-		contextualize();
-	}, false);
-
 	function contextualize() {
 		var elems = document.getElementsByClassName("bylink");
 		for (i = 0; i < elems.length; i++) {
