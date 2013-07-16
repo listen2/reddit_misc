@@ -6,8 +6,11 @@
 // ==/UserScript==
 
 (function(){
+	"use strict";
+
 	function contextualize() {
 		var elems = document.getElementsByClassName("bylink");
+		var i, e, d;
 		for (i = 0; i < elems.length; i++) {
 			if (elems[i].innerText !== "permalink") {			//CONFIGURE HERE: if your language uses a different word for 'permalink', change this line
 				continue;
@@ -25,4 +28,4 @@
 	}
 
 	contextualize();
-})();
+}());
