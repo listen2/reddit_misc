@@ -8,13 +8,17 @@
 // ==/UserScript==
 
 (function(){
+	"use strict";
+
 	var elems = document.getElementsByClassName("redditname pagename");
+	var i, d, e;
 	if (elems.length > 0) {
 		d = document.createElement("span");
+		d.style.setProperty("font-size", "small");
 
 		e = document.createElement("a");
 		e.innerHTML = "hot";
-		e.href = elems[0].firstChild.href
+		e.href = elems[0].firstChild.href;
 
 		d.appendChild(document.createTextNode(" ("));
 		d.appendChild(e);
@@ -24,14 +28,14 @@
 		elems[0].firstChild.href += "new";
 	}
 
-	var elems = document.getElementsByClassName("subreddit");
+	elems = document.getElementsByClassName("subreddit");
 	for (i = 0; i < elems.length; i++) {
 		d = document.createElement("span");
 		d.style.setProperty("font-size", "small");
 
 		e = document.createElement("a");
 		e.innerHTML = "hot";
-		e.href = elems[i].href
+		e.href = elems[i].href;
 
 		d.appendChild(document.createTextNode(" ("));
 		d.appendChild(e);
@@ -40,5 +44,4 @@
 
 		elems[i].href += "new";
 	}
-})();
-
+}());
