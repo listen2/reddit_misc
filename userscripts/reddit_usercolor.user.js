@@ -6,12 +6,10 @@
 // ==/UserScript==
 
 (function(){
-	window.addEventListener("neverEndingLoad", function() {    	
-		colorize();
-	}, false);
+	"use strict";
 
 	function get_color(name) {
-		var a = [0, 0, 0];
+		var a = [0, 0, 0], i, x;
 		for (i = 0; i < name.length; i++) {
 			x = name.charCodeAt(i)-48;
 			a[x%3] += x;
@@ -23,9 +21,10 @@
 	}
 
 	function colorize() {
+		var i, u, users;
 		users = document.getElementsByClassName("author");			//for usernames
-		for (f = 0; f < users.length; f++) {
-			u = users[f];
+		for (i = 0; i < users.length; i++) {
+			u = users[i];
 			//u.style.backgroundColor = get_color(u.innerText);
 			u.style.setProperty("color", get_color(u.innerText), "important");
 			u.style.setProperty("font-size", "14px", "important");
@@ -39,4 +38,8 @@
 	}
 
 	colorize();
-})();
+
+	window.addEventListener("neverEndingLoad", function() {
+		colorize();
+	}, false);
+}());
