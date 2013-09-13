@@ -12,14 +12,21 @@
 	"use strict";
 
 	function newize(elems, parens, fn) {
+		var g;
 		for (i = 0; i < elems.length; i++) {
 			d = document.createElement("span");
 			d.style.setProperty("font-size", "small");
 			d.style.setProperty("display", "inline");
 
+			if (elems[i].tagName === "SPAN") {
+				g = elems[i].firstChild;
+			} else {
+				g = elems[i];
+			}
+
 			e = document.createElement("a");
 			e.innerHTML = "hot";
-			e.href = elems[i].href;
+			e.href = g.href;
 
 			if (parens) {
 				d.appendChild(document.createTextNode(" ("));
@@ -28,11 +35,11 @@
 			} else {
 				d.appendChild(e);
 			}
-			//elems[i].parentNode.insertBefore(d, elems[i].nextSibling);
+			//g.parentNode.insertBefore(d, g.nextSibling);
 			fn(elems, d);
 
-			elems[i].href += "/new";
-			elems[i].href = elems[i].href.replace("//new", "/new");
+			g.href += "/new";
+			g.href = g.href.replace("//new", "/new");
 		}
 	}
 
