@@ -569,10 +569,10 @@ input[name="uh"] ~ a::after, .user::before {
 .user::before {	/* draw an invisible box over the quote so users don't click on it and log themselves out */
 	z-index: 10;
 	content: " ";
-	top: 15px;
-	right: 405px;
-	height: 45px;
-	width: 505px
+	top: 13px;
+	right: 400px;
+	height: 47px;
+	width: 440px
 }
 /* From here to EOF is generated code for the quotes */
 input[name="uh"][value^="b3"] ~ a::after { content: "I love what you've, um, neglected to do with the place." }
