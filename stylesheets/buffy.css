@@ -246,7 +246,9 @@ a[href="#sidebar_pic"] {
 
 
 /* username styling for special users */
-.author[href$="/ClareKramer"]::before {
+.author[href$="/ClareKramer"]::before,
+.author[href$="/Johnnyshock"]::before,
+.author[href$="/johnnyshock00"]::before {
 	background: url(%%assets%%) -40px -290px no-repeat;
 	content: "";
 	width: 14px;
@@ -256,7 +258,9 @@ a[href="#sidebar_pic"] {
 	top: 2px;
 	margin-right: 2px;
 }
-.author[href$="/ClareKramer"] {
+.author[href$="/ClareKramer"],
+.author[href$="/Johnnyshock"],
+.author[href$="/johnnyshock00"] {
 	color: #000 !important;
 }
 
