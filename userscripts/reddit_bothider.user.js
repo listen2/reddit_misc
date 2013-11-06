@@ -8,7 +8,7 @@
 (function(){
 	"use strict";
 
-	var bots = ["GharbadTheWeak", "WoWCaretaker"];		//CONFIGURE HERE
+	var bots = ["GharbadTheWeak", "WoWCaretaker", "AutoModerator"];		//CONFIGURE HERE
 	var c, d;
 
 	function filter() {
