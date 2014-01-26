@@ -248,7 +248,8 @@ a[href="#sidebar_pic"] {
 /* username styling for special users */
 .author[href$="/ClareKramer"]::before,
 .author[href$="/Johnnyshock"]::before,
-.author[href$="/johnnyshock00"]::before {
+.author[href$="/johnnyshock00"]::before,
+.author[href$="/Jeff_Ricketts"]::before {
 	background: url(%%assets%%) -40px -290px no-repeat;
 	content: "";
 	width: 14px;
@@ -260,7 +261,8 @@ a[href="#sidebar_pic"] {
 }
 .author[href$="/ClareKramer"],
 .author[href$="/Johnnyshock"],
-.author[href$="/johnnyshock00"] {
+.author[href$="/johnnyshock00"],
+.author[href$="/Jeff_Ricketts"] {
 	color: #000 !important;
 }
 
