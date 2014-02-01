@@ -347,6 +347,9 @@ div.content {		/* make some space above the main content */
 	border-radius: 5px;
 	margin-bottom: 5px;
 }
+.sidebox.create .spacer {	/* hide the lines and image below the create button */
+	display: none;
+}
 .morelink, .morelink:hover {
 	background: none;
 	height: 40px;
