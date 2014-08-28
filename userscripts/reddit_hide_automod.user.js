@@ -8,17 +8,36 @@
 (function(){
 	"use strict";
 
+	var c, d;
+
 	function hide() {
 		var subjs = document.getElementsByClassName("subject");
 
 		for (var s = 0; s < subjs.length; s++) {
 			if (subjs[s].childNodes[1] !== undefined && subjs[s].childNodes[1].textContent === "AutoModerator notification") {
 				//subjs[s].parentNode.style.display = "none";
-				subjs[s].parentNode.style.setProperty("height", "1.5em", "important");
-				subjs[s].parentNode.style.setProperty("overflow", "hidden", "important");
+				if (c.checked) {
+					subjs[s].parentNode.style.setProperty("height", "1.5em", "important");
+					subjs[s].parentNode.style.setProperty("overflow", "hidden", "important");
+				} else {
+					subjs[s].parentNode.style.setProperty("height", "inherit");
+					subjs[s].parentNode.style.setProperty("overflow", "inherit");
+				}
 			}
 		}
 	}
+
+	c = document.createElement("input");
+	c.type = "checkbox";
+	c.addEventListener("change", hide);
+	c.checked = true;
+	document.getElementsByClassName("menuarea")[0].appendChild(c);
+
+	d = document.createElement("label");
+	d.htmlFor = c.id;
+	d.innerText = "collapse automod";
+	document.getElementsByClassName("menuarea")[0].appendChild(d);
+
 
 	hide();
 
