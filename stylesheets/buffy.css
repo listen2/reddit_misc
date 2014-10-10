@@ -183,7 +183,13 @@ a[href="#sidebar_pic"] {
 	width: 298px;
 	border: 1px solid #500;
 }
-
+.side a[href="/r/buffy/wiki/faq#"] {
+	display: inline-block;
+	background: url(%%andrew-faq2%%) 0 0 no-repeat;
+	height: 100px;
+	width: 298px;
+	border: 1px solid #500;
+}
 
 /* upstakes and downstakes */
 
