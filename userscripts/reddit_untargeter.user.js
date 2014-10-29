@@ -12,9 +12,12 @@
 		var elems = document.getElementsByTagName("a");
 		var i;
 		for (i = 0; i < elems.length; i++) {
-			if (elems[i].className.indexOf("blank") > -1) {
-				elems[i].className = elems[i].className.replace(/may-blank(:?-within)?/g , "");
-			}
+			elems[i].className = elems[i].className.replace("may-blank" , "");
+		}
+
+		elems = document.getElementsByTagName("div");
+		for (i = 0; i < elems.length; i++) {
+			elems[i].className = elems[i].className.replace("may-blank-within" , "");
 		}
 	}
 
