@@ -12,12 +12,12 @@
 		var elems = document.getElementsByTagName("a");
 		var i;
 		for (i = 0; i < elems.length; i++) {
-			elems[i].className = elems[i].className.replace("may-blank" , "");
+			elems[i].classList.remove("may-blank");
 		}
 
 		elems = document.getElementsByTagName("div");
 		for (i = 0; i < elems.length; i++) {
-			elems[i].className = elems[i].className.replace("may-blank-within" , "");
+			elems[i].classList.remove("may-blank-within");
 		}
 	}
 
