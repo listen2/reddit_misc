@@ -11,12 +11,12 @@
 	function untarget() {
 		var elems = document.getElementsByTagName("a");
 		var i;
-		for (i = 0; i < elems.length; i++) {
+		for (i = elems.length - 1; i >= 0; i--) {
 			elems[i].classList.remove("may-blank");
 		}
 
 		elems = document.getElementsByTagName("div");
-		for (i = 0; i < elems.length; i++) {
+		for (i = elems.length - 1; i >= 0; i--) {
 			elems[i].classList.remove("may-blank-within");
 		}
 	}
