@@ -9,14 +9,10 @@
 	"use strict";
 
 	function untarget() {
-		var elems = document.getElementsByTagName("a");
+		var elems = document.querySelectorAll(".may-blank, .may-blank-within");
 		var i;
 		for (i = elems.length - 1; i >= 0; i--) {
 			elems[i].classList.remove("may-blank");
-		}
-
-		elems = document.getElementsByTagName("div");
-		for (i = elems.length - 1; i >= 0; i--) {
 			elems[i].classList.remove("may-blank-within");
 		}
 	}
