@@ -402,6 +402,7 @@ a[href$="/reddits/create"] {
 /* spoiler flair */
 .listing-page .linkflair-spoiler .thumbnail {	/* use the red "B" thumbnail */
 	background: url(%%assets%%) -110px -320px no-repeat !important;
+	height: 50px;
 }
 /* Halloween 2012 costume contest entries */
 .linkflair-costume .linkflairlabel {
